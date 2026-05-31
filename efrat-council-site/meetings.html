@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הרי אפרת · Harei Efrat — מועצת אפרת</title>
+<link rel="stylesheet" href="assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://hareiefrat.co.il/meetings.html",
+  "url": "https://hareiefrat.co.il/meetings.html",
+  "name": "Council Meetings — ישיבות / Harei Efrat",
+  "description": "Summaries of 14 Efrat Municipal Council meetings from December 2024 to February 2026.",
+  "isPartOf": { "@id": "https://hareiefrat.co.il/#website" },
+  "about": {
+    "@type": "Event",
+    "name": "Efrat Council Meetings 2024–2026",
+    "organizer": {
+      "@type": "GovernmentOrganization",
+      "name": "מועצת אפרת / Efrat Municipal Council"
+    }
+  }
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Harei Efrat logo">
+  <defs>
+    <linearGradient id="hillGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b18a3a"/>
+      <stop offset="100%" stop-color="#7a6235"/>
+    </linearGradient>
+    <linearGradient id="hillGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f6d8c"/>
+      <stop offset="100%" stop-color="#155267"/>
+    </linearGradient>
+  </defs>
+  <circle cx="46" cy="20" r="7" fill="#f5c842"/>
+  <path d="M0 50 L14 32 L24 42 L34 26 L46 40 L56 30 L64 38 L64 64 L0 64 Z" fill="url(#hillGrad)"/>
+  <path d="M0 56 L10 44 L20 50 L30 40 L42 52 L54 44 L64 50 L64 64 L0 64 Z" fill="url(#hillGrad2)" opacity="0.85"/>
+  <line x1="6" y1="62" x2="58" y2="62" stroke="#f7f6f2" stroke-width="0.8" opacity="0.5"/>
+</svg>
+      <div>
+        <h1 class="toggle-lang">
+          <span data-lang="he"><span class="he">הרי אפרת</span><span class="en">Harei Efrat</span></span>
+          <span data-lang="en"><span class="he">הרי אפרת</span><span class="en">Harei Efrat</span></span>
+        </h1>
+        <div class="subtitle toggle-lang">
+          <span data-lang="he">האתר של אפרת להבין מה קורה במועצה ובנדל"ן</span>
+          <span data-lang="en">Efrat's site to understand what is going on in the council and in real estate</span>
+        </div>
+      </div>
+    </div>
+    <nav class="primary">
+      <a href="index.html"><span class="inline-toggle-lang"><span data-lang="he">בית</span><span data-lang="en">Home</span></span></a>
+      <a href="members.html"><span class="inline-toggle-lang"><span data-lang="he">חברי המועצה</span><span data-lang="en">Members</span></span></a>
+      <a href="meetings.html" class="active"><span class="inline-toggle-lang"><span data-lang="he">ישיבות</span><span data-lang="en">Meetings</span></span></a>
+      <a href="topics.html"><span class="inline-toggle-lang"><span data-lang="he">נושאים</span><span data-lang="en">Topics</span></span></a>
+      <a href="alignment.html"><span class="inline-toggle-lang"><span data-lang="he">דפוסי הצבעה</span><span data-lang="en">Voting Patterns</span></span></a>
+      <a href="real-estate.html"><span class="inline-toggle-lang"><span data-lang="he">נדל"ן</span><span data-lang="en">Real Estate</span></span></a>
+      <a href="about.html"><span class="inline-toggle-lang"><span data-lang="he">אודות</span><span data-lang="en">About</span></span></a>
+      <a href="contact.html"><span class="inline-toggle-lang"><span data-lang="he">צור קשר</span><span data-lang="en">Contact</span></span></a>
+    </nav>
+    <div class="lang-toggle">
+      <button data-lang="he" class="active">עברית</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h2 class="section-title toggle-lang">
+    <span data-lang="he">סיכומי הישיבות</span>
+    <span data-lang="en">Meeting summaries</span>
+  </h2>
+  <p class="toggle-lang" style="color:var(--muted);font-size:0.9rem;margin-bottom:18px;">
+    <span data-lang="he">לחיצה על ישיבה פותחת את סדר היום המלא, ההצבעות וצירי הדיון שבה.</span>
+    <span data-lang="en">Click any meeting to expand its full agenda, votes, and speaker activity.</span>
+  </p>
+  <div id="meetings-list"></div>
+</main>
+
+<footer class="site">
+  <div class="inner toggle-lang">
+    <div data-lang="he">מבוסס על פרוטוקולים רשמיים של מועצת אפרת. עודכן לאחרונה: מאי 2026.<br><a href="https://www.efrat.muni.il/he/protocols/?year=0&category=6&order=date-desc" target="_blank" rel="noopener" style="color:var(--accent);">לפרוטוקול של כל ישיבת מועצה לחצו כאן</a>.</div>
+    <div data-lang="en">Based on official Efrat Council protocols. Last updated: May 2026.<br><a href="https://www.efrat.muni.il/he/protocols/?year=0&category=6&order=date-desc" target="_blank" rel="noopener" style="color:var(--accent);">For a protocol of every council meeting click here</a>.</div>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script>
+(function() {
+  const list = document.getElementById('meetings-list');
+  // Show meetings in reverse-chronological order (most recent first)
+  const sortedMeetings = COUNCIL_DATA.meetings.slice().sort((a, b) => b.date.localeCompare(a.date));
+  sortedMeetings.forEach(meeting => {
+    const votesInMeeting = COUNCIL_DATA.votes.filter(v => v.meeting === meeting.id);
+    const card = document.createElement('details');
+    card.className = 'expand-item meeting-card';
+    card.style.cssText = 'background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:16px;box-shadow:var(--shadow);overflow:hidden;';
+    const speakerSummary = COUNCIL_DATA.members
+      .map(m => ({ m, n: m.speaker_turns[meeting.id] || 0 }))
+      .filter(x => x.n > 0)
+      .sort((a, b) => b.n - a.n);
+
+    card.innerHTML = `
+      <summary style="padding:18px 22px;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;list-style:none;">
+        <div style="flex:1;min-width:240px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="color:var(--accent);font-size:0.9rem;">▸</span>
+            <h3 style="margin:0;font-size:1.15rem;">
+              <span class="inline-toggle-lang"><span data-lang="he">${meeting.title.he}</span><span data-lang="en">${meeting.title.en}</span></span>
+            </h3>
+          </div>
+          <div style="color:var(--muted);font-size:0.88rem;margin-top:4px;padding-inline-start:22px;">${meeting.date}
+            <span class="inline-toggle-lang"><span data-lang="he"> · ${meeting.hebrew_date}</span><span data-lang="en"></span></span>
+            <span style="margin-inline-start:12px;color:var(--accent);">
+              <span class="inline-toggle-lang">
+                <span data-lang="he">${votesInMeeting.length} הצבעות</span>
+                <span data-lang="en">${votesInMeeting.length} votes</span>
+              </span>
+            </span>
+          </div>
+        </div>
+        <div style="text-align:end;">
+          <div style="font-size:1.4rem;font-weight:700;">${meeting.attendance_count} / 11</div>
+          <div style="font-size:0.74rem;color:var(--muted);">
+            <span class="inline-toggle-lang"><span data-lang="he">חברים נכחו</span><span data-lang="en">members present</span></span>
+          </div>
+        </div>
+      </summary>
+      <div style="padding:0 22px 22px;border-top:1px solid var(--line);background:#faf8f1;">
+        ${meeting.absent && meeting.absent.length ? `
+          <div style="margin-top:14px;font-size:0.88rem;">
+            <strong class="inline-toggle-lang"><span data-lang="he">נעדרים:</span><span data-lang="en">Absent:</span></strong>
+            ${meeting.absent.map(n => `<span class="tag">${n}</span>`).join('')}
+          </div>` : ''}
+
+        <h4 style="margin:18px 0 8px;">
+          <span class="inline-toggle-lang"><span data-lang="he">סדר היום</span><span data-lang="en">Agenda</span></span>
+          <span style="font-size:0.78rem;color:var(--muted);font-weight:400;">
+            <span class="inline-toggle-lang"><span data-lang="he">— לחיצה על פריט פותחת סיכום</span><span data-lang="en">— click an item to expand</span></span>
+          </span>
+        </h4>
+        <div style="font-size:0.92rem;">
+          ${meeting.agenda.map(a => `
+            <details class="expand-item">
+              <summary>
+                <span class="item-num">${a.num}.</span>
+                <span class="item-title">
+                  <span class="inline-toggle-lang"><span data-lang="he">${a.he}</span><span data-lang="en">${a.en}</span></span>
+                </span>
+              </summary>
+              ${a.details ? `<div class="item-body">
+                <p><span class="inline-toggle-lang"><span data-lang="he">${a.details.he}</span><span data-lang="en">${a.details.en}</span></span></p>
+              </div>` : ''}
+            </details>
+          `).join('')}
+        </div>
+
+        <h4 style="margin:22px 0 8px;">
+          <span class="inline-toggle-lang"><span data-lang="he">החלטות והצבעות</span><span data-lang="en">Decisions & votes</span></span>
+        </h4>
+        <table class="votes" style="font-size:0.85rem;">
+          <tr>
+            <th style="text-align:start;"><span class="inline-toggle-lang"><span data-lang="he">נושא</span><span data-lang="en">Item</span></span></th>
+            <th><span class="inline-toggle-lang"><span data-lang="he">תוצאה</span><span data-lang="en">Result</span></span></th>
+          </tr>
+          ${votesInMeeting.map(v => `
+            <tr>
+              <td class="title">
+                <span class="inline-toggle-lang"><span data-lang="he">${v.title.he}</span><span data-lang="en">${v.title.en}</span></span>
+                ${v.note ? `<div style="font-size:0.78rem;color:var(--muted);margin-top:4px;font-style:italic;">
+                  <span class="inline-toggle-lang"><span data-lang="he">${v.note.he}</span><span data-lang="en">${v.note.en}</span></span>
+                </div>` : ''}
+              </td>
+              <td>
+                <span class="inline-toggle-lang"><span data-lang="he">${v.result.he}</span><span data-lang="en">${v.result.en}</span></span>
+              </td>
+            </tr>
+          `).join('')}
+        </table>
+
+        <h4 style="margin:22px 0 8px;">
+          <span class="inline-toggle-lang"><span data-lang="he">הכי הרבה דיברו</span><span data-lang="en">Most active speakers</span></span>
+        </h4>
+        <div>
+          ${speakerSummary.slice(0, 5).map(s => `
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;font-size:0.9rem;">
+              <div style="min-width:170px;">
+                <span class="inline-toggle-lang"><span data-lang="he">${s.m.he}</span><span data-lang="en">${s.m.en}</span></span>
+              </div>
+              <div style="flex:1;">
+                <div class="bar-container">
+                  <div class="bar-fill ${s.m.faction_role === 'incumbent' ? 'mayor' : s.m.faction_role === 'opposition' ? 'opposition' : ''}" style="width:${(100 * s.n / (speakerSummary[0]?.n || 1))}%"></div>
+                </div>
+              </div>
+              <div style="min-width:30px;text-align:end;font-weight:600;">${s.n}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+    list.appendChild(card);
+  });
+
+  const saved = (function(){ try { return localStorage.getItem('efrat-lang') || 'he'; } catch(e){ return 'he'; }})();
+  document.querySelectorAll('.toggle-lang, .inline-toggle-lang').forEach(el => {
+    el.classList.add(saved);
+  });
+})();
+</script>
+</body>
+</html>

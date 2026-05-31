@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Word cloud preview — הרי אפרת</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;800;900&family=Frank+Ruhl+Libre:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: "Heebo", sans-serif;
+    background: #f7f6f2;
+    margin: 0;
+    padding: 40px 20px;
+    color: #1e2a36;
+  }
+  .container { max-width: 1080px; margin: 0 auto; }
+
+  h2 {
+    margin: 0 0 6px;
+    font-size: 1.6rem;
+    font-family: "Frank Ruhl Libre", "Heebo", serif;
+    font-weight: 700;
+  }
+  .sub {
+    color: #5c6b7a;
+    font-size: 0.9rem;
+    margin-bottom: 26px;
+  }
+
+  /* SVG wrapper -------------------------------------------------- */
+  .cloud-wrap {
+    background:
+      radial-gradient(ellipse at 25% 30%, rgba(245,200,66,0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 70%, rgba(31,109,140,0.10) 0%, transparent 55%),
+      linear-gradient(180deg, #ffffff 0%, #fdfaf2 100%);
+    border: 1px solid #e3e1da;
+    border-radius: 14px;
+    padding: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  .cloud-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #b18a3a 0%, #1f6d8c 35%, #2c7a4b 65%, #b03a3a 100%);
+    z-index: 2;
+  }
+  svg.cloud {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  svg.cloud text {
+    font-family: "Heebo", sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    cursor: default;
+    transition: opacity 0.15s ease;
+  }
+  svg.cloud text.serif {
+    font-family: "Frank Ruhl Libre", "Heebo", serif;
+    font-weight: 900;
+  }
+  svg.cloud:hover text { opacity: 0.5; }
+  svg.cloud text:hover {
+    opacity: 1;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+  }
+
+  /* Color tokens */
+  .c-budget   { fill: #b18a3a; }
+  .c-budget-d { fill: #7a6235; }
+  .c-budget-l { fill: #d4af6a; }
+  .c-infra    { fill: #1f6d8c; }
+  .c-infra-d  { fill: #155267; }
+  .c-infra-l  { fill: #5a9bb5; }
+  .c-people   { fill: #2c7a4b; }
+  .c-people-d { fill: #1d5836; }
+  .c-people-l { fill: #5fa07b; }
+  .c-process  { fill: #5b6f87; }
+  .c-process-d{ fill: #3a4654; }
+  .c-place    { fill: #b03a3a; }
+  .c-place-d  { fill: #7d2929; }
+  .c-place-l  { fill: #c66464; }
+  .c-other    { fill: #1e2a36; }
+
+  /* Legend ---------------------------------------------------------- */
+  .legend {
+    margin-top: 24px;
+    font-size: 0.85rem;
+    color: #5c6b7a;
+    display: flex; flex-wrap: wrap;
+    gap: 18px; justify-content: center;
+    direction: rtl;
+  }
+  .legend > span { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+  .legend .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+  .panel {
+    margin-top: 26px;
+    padding: 18px 22px;
+    background: #fff;
+    border: 1px solid #e3e1da;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h2>תצוגה מקדימה - ענן מילים (SVG)</h2>
+  <div class="sub">SVG version. Words are positioned freely, rotated, and layered. Hover any word to isolate it.</div>
+
+  <div class="cloud-wrap">
+    <svg class="cloud" viewBox="0 0 900 540" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+      <!--
+        Coordinate system: 900 wide × 540 tall. Anchor middle. Hebrew RTL handled by direction.
+        Words are sized by frequency. Bigger words anchor the center; smaller fill the periphery.
+        Rotations create rhythm; we keep ≤25° on most so the cloud remains scannable.
+      -->
+
+      <!-- TIER 1 — the marquee. Bigger, serif, dead center -->
+      <text class="c-budget serif"    x="450" y="260" font-size="86" text-anchor="middle">תקציב</text>
+      <text class="c-people serif"    x="660" y="200" font-size="64" text-anchor="middle">נוער</text>
+      <text class="c-process-d serif" x="240" y="335" font-size="48" text-anchor="middle">משרד הפנים</text>
+
+      <!-- TIER 2 — large, with some rotation -->
+      <text class="c-budget"         x="450" y="335" font-size="40" text-anchor="middle">כסף</text>
+      <text class="c-infra-d serif"  x="690" y="320" font-size="38" text-anchor="middle" transform="rotate(-8 690 320)">תיירות</text>
+      <text class="c-people"         x="170" y="200" font-size="36" text-anchor="middle">חינוך</text>
+      <text class="c-place serif"    x="780" y="430" font-size="34" text-anchor="middle" transform="rotate(-6 780 430)">חוות עיטם</text>
+      <text class="c-infra"          x="155" y="430" font-size="34" text-anchor="middle" transform="rotate(4 155 430)">בנייה</text>
+      <text class="c-process"        x="450" y="105" font-size="32" text-anchor="middle">דיון</text>
+
+      <!-- TIER 3 — medium -->
+      <text class="c-people-d"       x="325" y="155" font-size="26" text-anchor="middle">עובדים</text>
+      <text class="c-budget-d"       x="575" y="160" font-size="26" text-anchor="middle">עסקים</text>
+      <text class="c-place-d serif"  x="310" y="395" font-size="24" text-anchor="middle" transform="rotate(-3 310 395)">מורדות הזית</text>
+      <text class="c-infra"          x="610" y="385" font-size="24" text-anchor="middle">אמות המים</text>
+      <text class="c-process"        x="780" y="115" font-size="22" text-anchor="middle">פרוטוקול</text>
+      <text class="c-people"         x="120" y="290" font-size="22" text-anchor="middle">תושבים</text>
+      <text class="c-budget serif"   x="595" y="455" font-size="24" text-anchor="middle">מפעל הפיס</text>
+
+      <!-- TIER 4 — smaller mid -->
+      <text class="c-other"          x="490" y="55" font-size="18" text-anchor="middle">אסטרטגי</text>
+      <text class="c-budget"         x="370" y="60" font-size="18" text-anchor="middle">תב״ר</text>
+      <text class="c-process-d"      x="260" y="265" font-size="18" text-anchor="middle">ועדת שמות</text>
+      <text class="c-infra-l"        x="690" y="55" font-size="18" text-anchor="middle">פרויקט</text>
+      <text class="c-people-d"       x="775" y="265" font-size="18" text-anchor="middle">בית ספר</text>
+      <text class="c-place"          x="450" y="395" font-size="22" text-anchor="middle">תמר</text>
+
+      <!-- TIER 5 — small -->
+      <text class="c-infra"          x="565" y="305" font-size="17" text-anchor="middle">מים</text>
+      <text class="c-infra-d"        x="365" y="285" font-size="16" text-anchor="middle">כביש</text>
+      <text class="c-process"        x="105" y="115" font-size="16" text-anchor="middle">ביקורת</text>
+      <text class="c-budget-l"       x="845" y="180" font-size="16" text-anchor="middle">ארנונה</text>
+      <text class="c-other"          x="65" y="365" font-size="16" text-anchor="middle" transform="rotate(-90 65 365)">ביטחון</text>
+
+      <!-- TIER 6 — micro accents and atmosphere -->
+      <text class="c-people"         x="250" y="80" font-size="14" text-anchor="middle">מילואים</text>
+      <text class="c-infra"          x="845" y="60" font-size="14" text-anchor="middle">ביוב</text>
+      <text class="c-budget"         x="845" y="245" font-size="14" text-anchor="middle">הלוואה</text>
+      <text class="c-place"          x="220" y="475" font-size="14" text-anchor="middle">דגן</text>
+      <text class="c-place-l"        x="305" y="490" font-size="14" text-anchor="middle">זית</text>
+      <text class="c-people-l"       x="650" y="105" font-size="14" text-anchor="middle">ספרייה</text>
+      <text class="c-process"        x="195" y="375" font-size="14" text-anchor="middle">חוק עזר</text>
+      <text class="c-other"          x="845" y="500" font-size="13" text-anchor="middle">פלסטינים</text>
+      <text class="c-budget-d"       x="540" y="105" font-size="13" text-anchor="middle">גירעון</text>
+      <text class="c-infra"          x="430" y="455" font-size="13" text-anchor="middle">בריכה</text>
+      <text class="c-people"         x="845" y="380" font-size="13" text-anchor="middle">מתנ״ס</text>
+      <text class="c-place"          x="600" y="490" font-size="13" text-anchor="middle">שיבת ציון</text>
+      <text class="c-other"          x="65" y="250" font-size="12" text-anchor="middle" transform="rotate(90 65 250)">שמירה</text>
+      <text class="c-budget-l"       x="845" y="475" font-size="12" text-anchor="middle">מענק</text>
+      <text class="c-process-d"      x="125" y="500" font-size="12" text-anchor="middle">מבקרת</text>
+      <text class="c-infra-l"        x="780" y="495" font-size="12" text-anchor="middle">תשתיות</text>
+      <text class="c-place"          x="500" y="500" font-size="12" text-anchor="middle">קבר רחל</text>
+      <text class="c-people-l"       x="380" y="495" font-size="12" text-anchor="middle">תפילה</text>
+      <text class="c-people"         x="65" y="155" font-size="11" text-anchor="middle">חיילים</text>
+      <text class="c-people-l"       x="190" y="240" font-size="11" text-anchor="middle">קייטנה</text>
+      <text class="c-process"        x="730" y="155" font-size="11" text-anchor="middle">מינוי</text>
+      <text class="c-infra-d"        x="55" y="60" font-size="11" text-anchor="middle">תכנון</text>
+
+    </svg>
+  </div>
+
+  <div class="legend">
+    <span><span class="dot" style="background:#b18a3a"></span>תקציב וכספים</span>
+    <span><span class="dot" style="background:#1f6d8c"></span>תשתיות ובנייה</span>
+    <span><span class="dot" style="background:#2c7a4b"></span>אנשים וקהילה</span>
+    <span><span class="dot" style="background:#5b6f87"></span>מנהל ותהליך</span>
+    <span><span class="dot" style="background:#b03a3a"></span>מקומות / שכונות</span>
+  </div>
+
+  <div class="panel" style="direction:ltr;">
+    <strong>What's different in SVG:</strong>
+    <ul>
+      <li><strong>True hover isolation</strong> — when you mouse over the cloud, every word fades except the one under your cursor. This works only with SVG; CSS-flex doesn't get you the same focus effect cleanly.</li>
+      <li><strong>Words tucked into gaps</strong> instead of grid-flow positioning — "ביטחון" and "שמירה" rotate 90°, sitting in the left margin. "מורדות הזית" and "תיירות" tilt slightly. The cloud feels less like a list and more like a constellation.</li>
+      <li><strong>Crisp at every size</strong> — SVG scales, so this will look identical on phones, retina monitors, and a projector. The CSS version stretches but uses raster-rendered text.</li>
+      <li><strong>One-click navigation</strong> is easy to add: every &lt;text&gt; can become a link to <code>topics.html?q=&lt;word&gt;</code>. The handler is two lines of JS that reads the click target's <code>data-word</code> attribute.</li>
+      <li><strong>The viewBox does the responsive work</strong> — it's set to <code>900 × 540</code> with <code>preserveAspectRatio="xMidYMid meet"</code>, so positions stay fixed relative to each other while the whole thing scales to fit the page width.</li>
+    </ul>
+    <p>If this version reads well, I'll wire it into the live topics page above the search bar, with click-to-search hooked up. Word positions and sizes are pure data — easy to tweak any single one without touching the others.</p>
+  </div>
+
+</div>
+</body>
+</html>

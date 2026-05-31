@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Efrat population by age — preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  body {
+    font-family: "Heebo", sans-serif;
+    background: #f7f6f2;
+    margin: 0;
+    padding: 40px 20px;
+    color: #1e2a36;
+  }
+  .container { max-width: 1080px; margin: 0 auto; }
+  h2 {
+    margin: 0 0 6px;
+    font-size: 1.6rem;
+    font-family: "Frank Ruhl Libre", serif;
+    font-weight: 700;
+  }
+  .sub { color: #5c6b7a; font-size: 0.9rem; margin-bottom: 24px; }
+  .chart-wrap {
+    background: #fff;
+    border: 1px solid #e3e1da;
+    border-radius: 12px;
+    padding: 28px 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .chart-wrap h3 {
+    margin: 0 0 14px;
+    font-size: 1.05rem;
+    color: #1e2a36;
+    font-weight: 600;
+  }
+  .chart-box {
+    position: relative;
+    height: 460px;
+    width: 100%;
+  }
+  .toggle-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    justify-content: flex-start;
+  }
+  .toggle-row button {
+    padding: 6px 14px;
+    border: 1px solid #e3e1da;
+    background: #fff;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: #5c6b7a;
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+  .toggle-row button.active {
+    background: #1e2a36;
+    color: #fff;
+    border-color: #1e2a36;
+  }
+  .panel {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: #fff;
+    border: 1px solid #e3e1da;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    direction: ltr;
+  }
+  .panel ul { padding-inline-start: 22px; margin: 6px 0; }
+  table.data { width: 100%; border-collapse: collapse; font-size: 0.78rem; margin-top: 10px; direction: ltr; }
+  table.data th, table.data td { padding: 4px 8px; border-bottom: 1px solid #f0efe8; text-align: end; }
+  table.data th:first-child, table.data td:first-child { text-align: start; }
+  table.data th { background: #f3eee2; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h2>אוכלוסיית אפרת לפי קבוצות גיל, 2009–2024</h2>
+  <div class="sub">Efrat population by age group, 2009–2024 — based on Israel Central Bureau of Statistics annual figures.</div>
+
+  <div class="chart-wrap">
+    <div class="toggle-row">
+      <button id="btn-pct" class="active">אחוזים · % of total</button>
+      <button id="btn-abs">מספרים מוחלטים · Absolute</button>
+    </div>
+
+    <h3 id="chart-title">אוכלוסיית אפרת לפי קבוצות גיל (כאחוז מהסך)</h3>
+    <div class="chart-box">
+      <canvas id="pop-chart"></canvas>
+    </div>
+    <p style="font-size:0.78rem;color:#888;text-align:center;margin:10px 0 0;">
+      מקור: למ"ס · Source: Israel CBS. Buckets map approximately to 5-year CBS bins.
+    </p>
+  </div>
+
+  <div class="panel">
+    <strong>What the percentages show:</strong>
+    <ul>
+      <li><strong>The 65+ share more than doubled</strong> — from 3.8% in 2009 to 10.6% in 2024. The single clearest structural shift in the town.</li>
+      <li><strong>Children under 5</strong> dropped from 12.1% to 9.6% of the population. Even though the absolute number rose, the under-5 share is shrinking.</li>
+      <li><strong>School-age (5–19)</strong> held remarkably steady — 34.7% in 2009, 35.6% in 2024. Efrat remains a school-age town.</li>
+      <li><strong>20–29 (young adults)</strong> peaked in the mid-2010s (~17%) and has fallen back to ~11% — fewer young adults staying or returning.</li>
+      <li><strong>30–49 (parents)</strong> share dipped slightly from 22.7% to 22.6% — essentially unchanged.</li>
+      <li><strong>50–64</strong> share fell from 13.9% to 10.8% — fewer late-career residents, proportionally.</li>
+      <li><strong>The story in one line:</strong> Efrat is aging at the top while the youngest share is shrinking. The school-age core stays steady, but the demographic center of gravity is slowly moving older.</li>
+    </ul>
+  </div>
+
+  <div class="panel" id="data-panel">
+    <strong>Raw data (totals only, Jewish residents):</strong>
+    <table class="data">
+      <thead>
+        <tr><th>Year</th><th>0–4</th><th>5–19</th><th>20–29</th><th>30–49</th><th>50–64</th><th>65+</th><th>Total</th></tr>
+      </thead>
+      <tbody id="data-tbody"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+// Each row: [year, age0_4, age5_19, age20_29, age30_49, age50_64, age65plus]
+// Source: CBS table for Efrat (locality code 3650), Jewish population, "סה״כ" rows.
+const POP = [
+  [2009,  871,  775+851+865,   519+391,  386+371+417+455,   454+336+208,  274],
+  [2010,  896,  797+889+881,   520+419,  459+360+405+464,   459+371+229,  295],
+  [2011,  915,  852+858+931,   709+536,  429+345+369+435,   399+388+232,  300],
+  [2012,  866,  878+897+867,   737+611,  406+339+351+450,   398+414+257,  342],
+  [2013,  887,  880+864+946,   702+608,  449+349+346+414,   403+394+294,  376],
+  [2014,  863,  933+902+971,   722+599,  477+380+345+398,   419+394+306,  420],
+  [2015,  862,  959+873+1038,  685+626,  488+430+334+372,   422+415+332,  466],
+  [2016,  957,  1022+969+899,  754+651,  560+440+352+379,   412+388+377,  498],
+  [2017, 1045,  1093+1002+942, 782+647,  643+473+377+368,   424+383+395,  542],
+  [2018, 1219,  1279+1148+948, 848+667,  720+602+442+375,   404+398+400,  640],
+  [2019, 1338,  1373+1241+1039,829+670,  779+697+504+384,   413+417+408,  713],
+  [2020, 1383,  1498+1338+1019,903+670,  797+783+575+409,   393+433+420,  782],
+  [2021, 1385,  1533+1411+1137,852+699,  728+860+634+427,   409+429+415,  886],
+  [2022, 1302,  1534+1439+1220,774+704,  646+897+669+457,   402+445+410,  957],
+  [2023, 1242,  1572+1531+1215,713+594,  559+857+761+531,   425+440+464, 1201],
+  [2024, 1167,  1514+1557+1246,772+539,  522+816+803+592,   406+434+462, 1282],
+];
+
+const LABELS = POP.map(r => r[0]);
+const AGE_LABELS = ['0–4', '5–19', '20–29', '30–49', '50–64', '65+'];
+const COLORS = ['#5fa07b', '#1f6d8c', '#b18a3a', '#7a6235', '#b03a3a', '#5b6f87'];
+
+function getDatasets(mode) {
+  return AGE_LABELS.map((label, i) => {
+    const data = POP.map(row => {
+      const total = row[1]+row[2]+row[3]+row[4]+row[5]+row[6];
+      const value = row[i+1];
+      return mode === 'pct' ? +(100 * value / total).toFixed(1) : value;
+    });
+    return {
+      label,
+      data,
+      backgroundColor: COLORS[i],
+      borderColor: COLORS[i],
+      borderWidth: 0,
+      fill: true,
+      tension: 0.25,
+      pointRadius: 0,
+      pointHoverRadius: 4,
+    };
+  });
+}
+
+let chart;
+function build(mode) {
+  if (chart) chart.destroy();
+  const ctx = document.getElementById('pop-chart');
+  chart = new Chart(ctx, {
+    type: 'line',
+    data: { labels: LABELS, datasets: getDatasets(mode) },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { size: 12 }, boxWidth: 14, padding: 10 }
+        },
+        tooltip: {
+          backgroundColor: '#fff',
+          titleColor: '#1e2a36',
+          bodyColor: '#1e2a36',
+          borderColor: '#e3e1da',
+          borderWidth: 1,
+          padding: 10,
+          callbacks: {
+            label: ctx => {
+              const v = ctx.parsed.y;
+              return ctx.dataset.label + ': ' + (mode === 'pct' ? v + '%' : v.toLocaleString());
+            }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+        y: {
+          stacked: true,
+          beginAtZero: true,
+          ticks: {
+            font: { size: 11 },
+            callback: v => mode === 'pct' ? v + '%' : v.toLocaleString()
+          },
+          grid: { color: '#f0efe8' },
+          max: mode === 'pct' ? 100 : undefined
+        }
+      }
+    }
+  });
+  document.getElementById('chart-title').textContent =
+    mode === 'pct'
+      ? 'אוכלוסיית אפרת לפי קבוצות גיל (כאחוז מהסך)'
+      : 'אוכלוסיית אפרת לפי קבוצות גיל (מספרים מוחלטים)';
+}
+
+document.getElementById('btn-abs').addEventListener('click', e => {
+  document.querySelectorAll('.toggle-row button').forEach(b => b.classList.remove('active'));
+  e.currentTarget.classList.add('active');
+  build('abs');
+});
+document.getElementById('btn-pct').addEventListener('click', e => {
+  document.querySelectorAll('.toggle-row button').forEach(b => b.classList.remove('active'));
+  e.currentTarget.classList.add('active');
+  build('pct');
+});
+
+build('pct');
+
+// Populate data table
+const tbody = document.getElementById('data-tbody');
+POP.forEach(row => {
+  const tr = document.createElement('tr');
+  const total = row[1]+row[2]+row[3]+row[4]+row[5]+row[6];
+  tr.innerHTML = `
+    <td>${row[0]}</td>
+    <td>${row[1].toLocaleString()}</td>
+    <td>${row[2].toLocaleString()}</td>
+    <td>${row[3].toLocaleString()}</td>
+    <td>${row[4].toLocaleString()}</td>
+    <td>${row[5].toLocaleString()}</td>
+    <td>${row[6].toLocaleString()}</td>
+    <td><strong>${total.toLocaleString()}</strong></td>
+  `;
+  tbody.appendChild(tr);
+});
+</script>
+</body>
+</html>
