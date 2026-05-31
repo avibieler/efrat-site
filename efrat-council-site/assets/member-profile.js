@@ -9,7 +9,6 @@
   const meetings = COUNCIL_DATA.meetings;
   const myVotes = COUNCIL_DATA.votes.map(v => ({ v, pos: v.positions[id] }));
   const mayor = COUNCIL_DATA.members.find(x => x.role.en.toLowerCase().includes('mayor'));
-  const factionLabel = ({incumbent:{he:'ראש המועצה',en:'Mayor'},deputy:{he:'סגן',en:'Deputy'},coalition:{he:'קואליציה',en:'Coalition'},opposition:{he:'אופוזיציה',en:'Opposition'},mixed:{he:'מעורב',en:'Mixed'}})[m.faction_role];
 
   // Voting stats vs mayor
   let same = 0, total = 0;
@@ -46,9 +45,7 @@
         </h2>
         <div style="color:var(--muted);font-size:1rem;margin-top:4px;">
           <span class="inline-toggle-lang"><span data-lang="he">${m.role.he}</span><span data-lang="en">${m.role.en}</span></span>
-          <span class="faction-pill faction-${m.faction_role}" style="margin-${document.dir==='rtl'?'right':'left'}:10px;">
-            <span class="inline-toggle-lang"><span data-lang="he">${factionLabel.he}</span><span data-lang="en">${factionLabel.en}</span></span>
-          </span>
+
         </div>
       </div>
     </section>
