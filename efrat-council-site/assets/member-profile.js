@@ -6,7 +6,7 @@
   const m = COUNCIL_DATA.members.find(x => x.id === id);
   if (!m) { root.innerHTML = '<p>Member not found</p>'; return; }
 
-  const meetings = COUNCIL_DATA.meetings;
+  const meetings = COUNCIL_DATA.meetings.slice().sort((a,b)=>a.date.localeCompare(b.date));
   const myVotes = COUNCIL_DATA.votes.map(v => ({ v, pos: v.positions[id] }));
   const mayor = COUNCIL_DATA.members.find(x => x.role.en.toLowerCase().includes('mayor'));
 
