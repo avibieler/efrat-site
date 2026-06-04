@@ -105,8 +105,12 @@
 <script>
 (function() {
   const grid = document.getElementById('member-grid');
-  const meetings = COUNCIL_DATA.meetings.map(m => m.id);
-  const totalMeetings = meetings.length;
+  const meetingObjs = COUNCIL_DATA.meetings;
+  const meetings = meetingObjs.map(m => m.id);
+
+  // Only count meetings for which the member was actually on the council
+  const onCouncil = (m, mt) => mt.date >= m.council_from && (!m.council_to || mt.date <= m.council_to);
+  const tenureMeetings = (m) => meetingObjs.filter(mt => onCouncil(m, mt));
 
   // Sum across whichever meeting ids exist
   const sumTurns = (m) => meetings.reduce((s, k) => s + (m.speaker_turns[k] || 0), 0);
@@ -116,7 +120,9 @@
 
   members.forEach(m => {
     const total = sumTurns(m);
-    const attended = meetings.filter(k => m.attendance[k]).length;
+    const myMeetings = tenureMeetings(m);
+    const totalMeetings = myMeetings.length;
+    const attended = myMeetings.filter(mt => m.attendance[mt.id]).length;
     const card = document.createElement('a');
     card.className = 'card';
     card.href = 'members/' + m.id + '.html';

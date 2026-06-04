@@ -24,11 +24,13 @@
   const tally = { for: 0, against: 0, abstain: 0, not_voting: 0, absent: 0 };
   myVotes.forEach(({pos}) => { if (pos) tally[pos]++; });
 
-  // Total speaker turns + attendance — dynamic across however many meetings exist
+  // Total speaker turns + attendance — count only meetings during the member's council tenure
+  const onCouncil = (mt) => mt.date >= m.council_from && (!m.council_to || mt.date <= m.council_to);
+  const tenureMeetings = meetings.filter(onCouncil);
   const meetingIds = meetings.map(mt => mt.id);
   const totalSpeaks = meetingIds.reduce((s, k) => s + (m.speaker_turns[k] || 0), 0);
-  const meetingsAttended = meetingIds.filter(k => m.attendance[k]).length;
-  const totalMeetings = meetingIds.length;
+  const meetingsAttended = tenureMeetings.filter(mt => m.attendance[mt.id]).length;
+  const totalMeetings = tenureMeetings.length;
 
   root.innerHTML = `
     <div style="display:flex;gap:16px;align-items:center;margin-bottom:16px;flex-wrap:wrap;">
@@ -97,7 +99,7 @@
           <th><span class="inline-toggle-lang"><span data-lang="he">נכח?</span><span data-lang="en">Present?</span></span></th>
           <th><span class="inline-toggle-lang"><span data-lang="he">תורות דיבור</span><span data-lang="en">Speaker turns</span></span></th>
         </tr>
-        ${meetings.map(mt => `
+        ${tenureMeetings.map(mt => `
           <tr>
             <td class="title">
               <span class="inline-toggle-lang">

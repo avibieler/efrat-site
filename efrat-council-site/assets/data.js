@@ -14,6 +14,7 @@ const COUNCIL_DATA = {
   members: [
     {
       id: "dovi-shefler",
+      council_from: "2024-01-01", council_to: null,
       he: "דובי שפלר",
       en: "Dovi Shefler",
       role: { he: "ראש המועצה", en: "Mayor / Head of Council" },
@@ -24,6 +25,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "tzuri-dotan",
+      council_from: "2024-01-01", council_to: null,
       he: "צורי דותן",
       en: "Tzuri Dotan",
       role: { he: "סגן ומ\"מ ראש המועצה", en: "Deputy Mayor" },
@@ -34,6 +36,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "hanani-feigin",
+      council_from: "2024-01-01", council_to: null,
       he: "חנני פייגין",
       en: "Hanani Feigin",
       role: { he: "חבר מועצה", en: "Council Member" },
@@ -44,6 +47,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "avi-hadida",
+      council_from: "2024-01-01", council_to: null,
       he: "אבי חדידה",
       en: "Avi Hadida",
       role: { he: "חבר מועצה", en: "Council Member" },
@@ -54,6 +58,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "dana-spiegel",
+      council_from: "2024-10-08", council_to: null,
       he: "דנה שפיגל",
       en: "Dana Spiegel",
       role: { he: "חברת מועצה", en: "Council Member" },
@@ -64,6 +69,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "menachem-spitz",
+      council_from: "2024-10-08", council_to: null,
       he: "מנחם שפיץ",
       en: "Menachem Spitz",
       role: { he: "חבר מועצה", en: "Council Member" },
@@ -74,6 +80,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "avital-cohen",
+      council_from: "2024-01-01", council_to: null,
       he: "אביטל כהן",
       en: "Avital Cohen",
       role: { he: "חברת מועצה", en: "Council Member" },
@@ -84,6 +91,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "ariella-perry",
+      council_from: "2024-01-01", council_to: null,
       he: "אריאלה פרי",
       en: "Ariella Perry",
       role: { he: "חברת מועצה", en: "Council Member" },
@@ -94,6 +102,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "yishai-fleisher",
+      council_from: "2024-01-01", council_to: null,
       he: "ישי יעקב פליישר",
       en: "Yishai Fleisher",
       role: { he: "חבר מועצה", en: "Council Member" },
@@ -104,6 +113,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "shlomo-bentzvi",
+      council_from: "2024-01-01", council_to: null,
       he: "שלמה בן צבי",
       en: "Shlomo Ben Tzvi",
       role: { he: "חבר מועצה", en: "Council Member" },
@@ -114,6 +124,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "talia-marcus",
+      council_from: "2024-10-08", council_to: null,
       he: "טליה מרכוס",
       en: "Talia Marcus",
       role: { he: "חברת מועצה", en: "Council Member" },
@@ -124,6 +135,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "oded-ravivi",
+      council_from: "2024-01-01", council_to: "2024-09-01",
       he: "עודד רביבי",
       en: "Oded Ravivi",
       role: { he: "חבר מועצה (לשעבר)", en: "Council Member (former)" },
@@ -135,6 +147,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "orit-samuels",
+      council_from: "2024-01-01", council_to: "2024-09-01",
       he: "אורית סמואלס",
       en: "Orit Samuels",
       role: { he: "חברת מועצה (לשעבר)", en: "Council Member (former)" },
@@ -146,6 +159,7 @@ const COUNCIL_DATA = {
     },
     {
       id: "tamar-amar",
+      council_from: "2024-01-01", council_to: "2024-09-01",
       he: "תמר עמר",
       en: "Tamar Amar",
       role: { he: "חברת מועצה (לשעבר)", en: "Council Member (former)" },
