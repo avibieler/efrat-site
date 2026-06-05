@@ -641,3 +641,35 @@ details.expand-item .item-body p:first-child { margin-top: 12px; }
 }
 [lang="he"] .speaker-position .sp-quote { border-radius: 4px 0 0 4px; }
 
+
+/* Voting-patterns matrix: scrollable pane with frozen header row and first column */
+.matrix-wrap {
+  overflow: auto;
+  max-height: 80vh;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  -webkit-overflow-scrolling: touch;
+}
+.matrix-wrap table.votes { border: none; border-radius: 0; }
+/* Header row of member names stays at the top while scrolling */
+#vote-matrix th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f3eee2;
+  box-shadow: inset 0 -1px 0 var(--line);
+}
+/* First column (vote titles) stays at the left while scrolling sideways */
+#vote-matrix td.title {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: #fff;
+  box-shadow: inset -1px 0 0 var(--line);
+}
+/* Top-left corner cell sits above both */
+#vote-matrix th:first-child {
+  left: 0;
+  z-index: 3;
+  box-shadow: inset -1px 0 0 var(--line), inset 0 -1px 0 var(--line);
+}
