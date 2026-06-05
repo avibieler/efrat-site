@@ -21,7 +21,7 @@
   "@id": "https://hareiefrat.com/alignment.html",
   "url": "https://hareiefrat.com/alignment.html",
   "name": "Voting Patterns — דפוסי הצבעה / Harei Efrat",
-  "description": "Full vote matrix showing how each Efrat council member voted across 18 meetings.",
+  "description": "Full vote matrix showing how each Efrat council member voted across 22 meetings.",
   "isPartOf": { "@id": "https://hareiefrat.com/#website" },
   "about": {
     "@type": "GovernmentOrganization",
@@ -82,11 +82,11 @@
   <section class="hero toggle-lang">
     <div data-lang="he">
       <h2>איך כל חבר הצביע</h2>
-      <p>הטבלה למטה מציגה את כל ההצבעות הרשמיות שתועדו ב-18 הישיבות. ירוק = בעד, אדום = נגד, צהוב = נמנע, אפור-בהיר = לא הצביע (היה בישיבה אבל לא השתתף בהצבעה), אפור = נעדר מהישיבה.</p>
+      <p>הטבלה למטה מציגה את כל ההצבעות הרשמיות שתועדו ב-22 הישיבות. ירוק = בעד, אדום = נגד, צהוב = נמנע, אפור-בהיר = לא הצביע (היה בישיבה אבל לא השתתף בהצבעה), אפור = נעדר מהישיבה.</p>
     </div>
     <div data-lang="en">
       <h2>How every member voted</h2>
-      <p>Below is every recorded vote across the 18 meetings. Green = for, red = against, yellow = abstain, light grey = not voting (present but didn't participate), grey = absent from the meeting.</p>
+      <p>Below is every recorded vote across the 22 meetings. Green = for, red = against, yellow = abstain, light grey = not voting (present but didn't participate), grey = absent from the meeting.</p>
     </div>
   </section>
 
@@ -138,7 +138,7 @@
   `;
   tbl.appendChild(headRow);
 
-  const meetingShort = { jun30: '30.6.24', jul9: '9.7.24', oct8: '8.10.24', nov5: '5.11.24', dec3: '3.12.24', dec23: '23.12.24', jan7: '7.1.25', feb4: '4.2', apr8: '8.4', may6: '6.5', jun10: '10.6', jul22: '22.7', sep9: '9.9', sep30: '30.9', nov4: '4.11', dec2: '2.12', jan6: '6.1', feb3: '3.2' };
+  const meetingShort = { jun3: '3.6.24', jun25app: '25.6·א', jun25arn: '25.6·ב', jun25bud: '25.6·ג', jun30: '30.6.24', jul9: '9.7.24', oct8: '8.10.24', nov5: '5.11.24', dec3: '3.12.24', dec23: '23.12.24', jan7: '7.1.25', feb4: '4.2', apr8: '8.4', may6: '6.5', jun10: '10.6', jul22: '22.7', sep9: '9.9', sep30: '30.9', nov4: '4.11', dec2: '2.12', jan6: '6.1', feb3: '3.2' };
   votes.forEach(v => {
     const tr = document.createElement('tr');
     tr.innerHTML = `
