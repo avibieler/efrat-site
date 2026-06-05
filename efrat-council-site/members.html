@@ -109,7 +109,7 @@
   const meetings = meetingObjs.map(m => m.id);
 
   // Only count meetings for which the member was actually on the council
-  const onCouncil = (m, mt) => mt.date >= m.council_from && (!m.council_to || mt.date <= m.council_to);
+  const onCouncil = (m, mt) => m.tenure ? m.tenure.some(([f,to]) => mt.date >= f && (!to || mt.date <= to)) : (mt.date >= m.council_from && (!m.council_to || mt.date <= m.council_to));
   const tenureMeetings = (m) => meetingObjs.filter(mt => onCouncil(m, mt));
 
   // Sum across whichever meeting ids exist

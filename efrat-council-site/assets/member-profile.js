@@ -25,7 +25,7 @@
   myVotes.forEach(({pos}) => { if (pos) tally[pos]++; });
 
   // Total speaker turns + attendance — count only meetings during the member's council tenure
-  const onCouncil = (mt) => mt.date >= m.council_from && (!m.council_to || mt.date <= m.council_to);
+  const onCouncil = (mt) => m.tenure ? m.tenure.some(([f,to]) => mt.date >= f && (!to || mt.date <= to)) : (mt.date >= m.council_from && (!m.council_to || mt.date <= m.council_to));
   const tenureMeetings = meetings.filter(onCouncil);
   const meetingIds = meetings.map(mt => mt.id);
   const totalSpeaks = meetingIds.reduce((s, k) => s + (m.speaker_turns[k] || 0), 0);
