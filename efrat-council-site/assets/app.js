@@ -16,7 +16,13 @@
     try { saved = localStorage.getItem('efrat-lang') || 'he'; } catch (e) {}
     applyLang(saved);
     document.querySelectorAll('.lang-toggle button').forEach(b => {
-      b.addEventListener('click', () => applyLang(b.dataset.lang));
+      b.addEventListener('click', () => {
+        var lang = b.dataset.lang; // 'he' or 'en'
+        // Push a GTM dataLayer event so a tag can fire on each language click
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'language_toggle', language: lang });
+        applyLang(lang);
+      });
     });
   }
   if (document.readyState === 'loading') {
