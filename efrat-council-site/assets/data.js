@@ -5,8 +5,8 @@
 const COUNCIL_DATA = {
   metadata: {
     council: { he: "מועצה מקומית אפרת", en: "Efrat Local Council" },
-    meetings_analyzed: 27,
-    date_range: { from: "2024-03-31", to: "2026-04-14" },
+    meetings_analyzed: 28,
+    date_range: { from: "2024-03-31", to: "2026-05-12" },
     last_updated: "2026-06-14",
     source: "Official meeting protocols (Hebrew)",
   },
@@ -18,8 +18,8 @@ const COUNCIL_DATA = {
       he: "דובי שפלר",
       en: "Dovi Shefler",
       role: { he: "ראש המועצה", en: "Mayor / Head of Council" },
-      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: true, may6: true, jun10: true, jul22: true, sep9: true, sep30: false, nov4: true, dec2: true, jan6: true, feb3: true, jun30: true, jul9: true, oct8: true, nov5: true, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: true },
-      speaker_turns: { dec3: 40, dec23: 25, jan7: 45, feb4: 216, apr8: 113, may6: 86, jun10: 193, jul22: 67, sep9: 94, sep30: 0, nov4: 107, dec2: 205, jan6: 60, feb3: 106, jun30: 72, jul9: 139, oct8: 292, nov5: 295, jun3: 47, jun25app: 38, jun25arn: 48, jun25bud: 51, mar31: 12, apr15: 81, sep26: 14, jan6b: 89, apr14: 34 },
+      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: true, may6: true, jun10: true, jul22: true, sep9: true, sep30: false, nov4: true, dec2: true, jan6: true, feb3: true, jun30: true, jul9: true, oct8: true, nov5: true, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: true, may12: true },
+      speaker_turns: { dec3: 40, dec23: 25, jan7: 45, feb4: 216, apr8: 113, may6: 86, jun10: 193, jul22: 67, sep9: 94, sep30: 0, nov4: 107, dec2: 205, jan6: 60, feb3: 106, jun30: 72, jul9: 139, oct8: 292, nov5: 295, jun3: 47, jun25app: 38, jun25arn: 48, jun25bud: 51, mar31: 12, apr15: 81, sep26: 14, jan6b: 89, apr14: 34, may12: 78 },
       vote_alignment_with_mayor: 1.0,
       note: { he: "ראש המועצה; השתתף בכל הישיבות.", en: "Mayor; attended every meeting." }
     },
@@ -29,8 +29,8 @@ const COUNCIL_DATA = {
       he: "צורי דותן",
       en: "Tzuri Dotan",
       role: { he: "סגן ומ\"מ ראש המועצה", en: "Deputy Mayor" },
-      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: false, may6: true, jun10: true, jul22: false, sep9: true, sep30: true, nov4: true, dec2: true, jan6: false, feb3: false, jun30: true, jul9: true, oct8: false, nov5: false, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: false, apr14: true },
-      speaker_turns: { dec3: 30, dec23: 12, jan7: 30, feb4: 20, apr8: 0, may6: 50, jun10: 63, jul22: 0, sep9: 56, sep30: 129, nov4: 32, dec2: 16, jan6: 0, feb3: 0, jun30: 29, jul9: 98, oct8: 0, nov5: 0, jun3: 22, jun25app: 5, jun25arn: 10, jun25bud: 27, mar31: 2, apr15: 19, sep26: 1, jan6b: 0, apr14: 1 },
+      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: false, may6: true, jun10: true, jul22: false, sep9: true, sep30: true, nov4: true, dec2: true, jan6: false, feb3: false, jun30: true, jul9: true, oct8: false, nov5: false, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: false, apr14: true, may12: true },
+      speaker_turns: { dec3: 30, dec23: 12, jan7: 30, feb4: 20, apr8: 0, may6: 50, jun10: 63, jul22: 0, sep9: 56, sep30: 129, nov4: 32, dec2: 16, jan6: 0, feb3: 0, jun30: 29, jul9: 98, oct8: 0, nov5: 0, jun3: 22, jun25app: 5, jun25arn: 10, jun25bud: 27, mar31: 2, apr15: 19, sep26: 1, jan6b: 0, apr14: 1, may12: 13 },
       vote_alignment_with_mayor: 0.5,
       note: { he: "סגן ראש המועצה. ניהל את ישיבת ספטמבר 30 (ראש המועצה נעדר) ועמד בראש הצבעת עדכון תקציב 2025 שבה הוא וחנני התייצבו בעד הקיצוץ. נעדר מישיבת התקציב ומישיבת פברואר. בדצמבר הצביע נגד עמדת ראש המועצה בהמלצת ועדת הביקורת.", en: "Deputy Mayor. Chaired the Sep 30 meeting (mayor absent) and led the 2025 budget-update vote in which he and Hanani voted for the cuts. Missed the budget meeting and the Feb 3 meeting. In Dec voted against the mayor's position on the audit-committee tax-offset recommendation." }
     },
@@ -40,8 +40,8 @@ const COUNCIL_DATA = {
       he: "חנני פייגין",
       en: "Hanani Feigin",
       role: { he: "חבר מועצה", en: "Council Member" },
-      attendance: { dec3: true, dec23: true, jan7: false, feb4: true, apr8: false, may6: true, jun10: true, jul22: true, sep9: true, sep30: true, nov4: true, dec2: true, jan6: false, feb3: true, jun30: true, jul9: true, oct8: true, nov5: true, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: true },
-      speaker_turns: { dec3: 30, dec23: 12, jan7: 0, feb4: 169, apr8: 0, may6: 93, jun10: 81, jul22: 44, sep9: 55, sep30: 51, nov4: 58, dec2: 105, jan6: 0, feb3: 90, jun30: 11, jul9: 44, oct8: 171, nov5: 33, jun3: 28, jun25app: 1, jun25arn: 10, jun25bud: 28, mar31: 0, apr15: 0, sep26: 4, jan6b: 71, apr14: 10 },
+      attendance: { dec3: true, dec23: true, jan7: false, feb4: true, apr8: false, may6: true, jun10: true, jul22: true, sep9: true, sep30: true, nov4: true, dec2: true, jan6: false, feb3: true, jun30: true, jul9: true, oct8: true, nov5: true, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: true, may12: true },
+      speaker_turns: { dec3: 30, dec23: 12, jan7: 0, feb4: 169, apr8: 0, may6: 93, jun10: 81, jul22: 44, sep9: 55, sep30: 51, nov4: 58, dec2: 105, jan6: 0, feb3: 90, jun30: 11, jul9: 44, oct8: 171, nov5: 33, jun3: 28, jun25app: 1, jun25arn: 10, jun25bud: 28, mar31: 0, apr15: 0, sep26: 4, jan6b: 71, apr14: 10, may12: 39 },
       vote_alignment_with_mayor: 1.0,
       note: { he: "חבר מועצה בקואליציה. הצביע באופן עקבי עם ראש המועצה בנושא ההמלצה למניעת קיזוזי חובות. נמנע באישור פרוטוקול ישיבת התקציב משום שלא נכח בה (היה במילואים).", en: "Coalition member. Voted with the mayor on the disputed audit recommendation. Abstained on the Jan 6 budget protocol approval because he attended that meeting late (was on reserve duty)." }
     },
@@ -51,8 +51,8 @@ const COUNCIL_DATA = {
       he: "אבי חדידה",
       en: "Avi Hadida",
       role: { he: "חבר מועצה", en: "Council Member" },
-      attendance: { dec3: false, dec23: true, jan7: false, feb4: true, apr8: false, may6: true, jun10: false, jul22: false, sep9: true, sep30: true, nov4: true, dec2: true, jan6: true, feb3: false, jun30: true, jul9: true, oct8: false, nov5: true, jun3: false, jun25app: false, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: false },
-      speaker_turns: { dec3: 0, dec23: 22, jan7: 0, feb4: 57, apr8: 0, may6: 13, jun10: 0, jul22: 0, sep9: 22, sep30: 74, nov4: 50, dec2: 155, jan6: 45, feb3: 0, jun30: 52, jul9: 48, oct8: 0, nov5: 256, jun3: 0, jun25app: 0, jun25arn: 6, jun25bud: 17, mar31: 0, apr15: 67, sep26: 5, jan6b: 47, apr14: 0 },
+      attendance: { dec3: false, dec23: true, jan7: false, feb4: true, apr8: false, may6: true, jun10: false, jul22: false, sep9: true, sep30: true, nov4: true, dec2: true, jan6: true, feb3: false, jun30: true, jul9: true, oct8: false, nov5: true, jun3: false, jun25app: false, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: false, may12: false },
+      speaker_turns: { dec3: 0, dec23: 22, jan7: 0, feb4: 57, apr8: 0, may6: 13, jun10: 0, jul22: 0, sep9: 22, sep30: 74, nov4: 50, dec2: 155, jan6: 45, feb3: 0, jun30: 52, jul9: 48, oct8: 0, nov5: 256, jun3: 0, jun25app: 0, jun25arn: 6, jun25bud: 17, mar31: 0, apr15: 67, sep26: 5, jan6b: 47, apr14: 0, may12: 0 },
       vote_alignment_with_mayor: 0.0,
       note: { he: "יו\"ר ועדת ביקורת. ההתנגדות הברורה ביותר לראש המועצה: ההצבעה היחידה נגד תקציב 2026 (7:1). הציג את עצמו בפירוש כאופוזיציה, וטען שלא הוזמן לישיבת ההכנה לתקציב.", en: "Chair of audit committee. The single 'no' vote on the 2026 budget (7-1). Explicitly positioned himself as opposition, saying he was not invited to budget-preparation meetings (\"is this a coalition meeting?\")." }
     },
@@ -62,8 +62,8 @@ const COUNCIL_DATA = {
       he: "דנה שפיגל",
       en: "Dana Spiegel",
       role: { he: "חברת מועצה", en: "Council Member" },
-      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: true, may6: true, jun10: true, jul22: true, sep9: true, sep30: true, nov4: true, dec2: true, jan6: true, feb3: true, jun30: false, jul9: false, oct8: true, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: false, apr15: false, sep26: true, jan6b: true, apr14: true },
-      speaker_turns: { dec3: 10, dec23: 8, jan7: 12, feb4: 14, apr8: 16, may6: 3, jun10: 23, jul22: 7, sep9: 4, sep30: 8, nov4: 13, dec2: 6, jan6: 1, feb3: 32, jun30: 0, jul9: 0, oct8: 9, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 1, jan6b: 4, apr14: 3 },
+      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: true, may6: true, jun10: true, jul22: true, sep9: true, sep30: true, nov4: true, dec2: true, jan6: true, feb3: true, jun30: false, jul9: false, oct8: true, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: false, apr15: false, sep26: true, jan6b: true, apr14: true, may12: true },
+      speaker_turns: { dec3: 10, dec23: 8, jan7: 12, feb4: 14, apr8: 16, may6: 3, jun10: 23, jul22: 7, sep9: 4, sep30: 8, nov4: 13, dec2: 6, jan6: 1, feb3: 32, jun30: 0, jul9: 0, oct8: 9, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 1, jan6b: 4, apr14: 3, may12: 13 },
       vote_alignment_with_mayor: 1.0,
       note: { he: "נוכחות מלאה. הצביעה עם ראש המועצה בכל ההצבעות, כולל הצבעת ההמלצה המחלוקתית של ועדת הביקורת.", en: "Perfect attendance. Voted with the mayor on every vote including the contested audit-committee recommendation." }
     },
@@ -74,8 +74,8 @@ const COUNCIL_DATA = {
       he: "מנחם שפיץ",
       en: "Menachem Spitz",
       role: { he: "חבר מועצה", en: "Council Member" },
-      attendance: { dec3: true, dec23: true, jan7: true, feb4: false, apr8: true, may6: false, jun10: true, jul22: true, sep9: false, sep30: true, nov4: false, dec2: true, jan6: true, feb3: false, jun30: false, jul9: false, oct8: true, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: true, apr15: true, sep26: true, jan6b: false, apr14: true },
-      speaker_turns: { dec3: 8, dec23: 15, jan7: 22, feb4: 0, apr8: 11, may6: 0, jun10: 77, jul22: 19, sep9: 0, sep30: 26, nov4: 0, dec2: 69, jan6: 51, feb3: 0, jun30: 0, jul9: 0, oct8: 88, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 1, jan6b: 0, apr14: 7 },
+      attendance: { dec3: true, dec23: true, jan7: true, feb4: false, apr8: true, may6: false, jun10: true, jul22: true, sep9: false, sep30: true, nov4: false, dec2: true, jan6: true, feb3: false, jun30: false, jul9: false, oct8: true, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: true, apr15: true, sep26: true, jan6b: false, apr14: true, may12: true },
+      speaker_turns: { dec3: 8, dec23: 15, jan7: 22, feb4: 0, apr8: 11, may6: 0, jun10: 77, jul22: 19, sep9: 0, sep30: 26, nov4: 0, dec2: 69, jan6: 51, feb3: 0, jun30: 0, jul9: 0, oct8: 88, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 1, jan6b: 0, apr14: 7, may12: 6 },
       vote_alignment_with_mayor: 0.67,
       note: { he: "ביקש יחד עם אבי חדידה את הדיון על חוות עיטם. הצביע נגד עמדת ראש המועצה בנושא קיזוזי החובות, אך בעד תקציב 2026.", en: "Jointly with Avi Hadida requested the Eitam Farm discussion. Voted against the mayor's position on tax-offsets but supported the 2026 budget." }
     },
@@ -85,8 +85,8 @@ const COUNCIL_DATA = {
       he: "אביטל כהן",
       en: "Avital Cohen",
       role: { he: "חברת מועצה", en: "Council Member" },
-      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: true, may6: true, jun10: true, jul22: true, sep9: true, sep30: false, nov4: true, dec2: true, jan6: true, feb3: false, jun30: true, jul9: true, oct8: true, nov5: false, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: true },
-      speaker_turns: { dec3: 25, dec23: 8, jan7: 16, feb4: 96, apr8: 57, may6: 45, jun10: 60, jul22: 10, sep9: 75, sep30: 0, nov4: 24, dec2: 52, jan6: 3, feb3: 0, jun30: 35, jul9: 54, oct8: 72, nov5: 0, jun3: 53, jun25app: 12, jun25arn: 15, jun25bud: 24, mar31: 2, apr15: 31, sep26: 2, jan6b: 30, apr14: 7 },
+      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: true, may6: true, jun10: true, jul22: true, sep9: true, sep30: false, nov4: true, dec2: true, jan6: true, feb3: false, jun30: true, jul9: true, oct8: true, nov5: false, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: true, may12: false },
+      speaker_turns: { dec3: 25, dec23: 8, jan7: 16, feb4: 96, apr8: 57, may6: 45, jun10: 60, jul22: 10, sep9: 75, sep30: 0, nov4: 24, dec2: 52, jan6: 3, feb3: 0, jun30: 35, jul9: 54, oct8: 72, nov5: 0, jun3: 53, jun25app: 12, jun25arn: 15, jun25bud: 24, mar31: 2, apr15: 31, sep26: 2, jan6b: 30, apr14: 7, may12: 0 },
       vote_alignment_with_mayor: 1.0,
       note: { he: "חברת מועצה תומכת בקואליציה. הצביעה עם ראש המועצה בנושא הקיזוזים (\"אני עושה מה שחנני עושה\").", en: "Coalition member. Voted with the mayor on the audit-committee dispute (\"I'll do what Hanani does\")." }
     },
@@ -96,8 +96,8 @@ const COUNCIL_DATA = {
       he: "אריאלה פרי",
       en: "Ariella Perry",
       role: { he: "חברת מועצה", en: "Council Member" },
-      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: true, may6: false, jun10: true, jul22: true, sep9: true, sep30: true, nov4: true, dec2: true, jan6: true, feb3: true, jun30: true, jul9: true, oct8: true, nov5: true, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: true },
-      speaker_turns: { dec3: 22, dec23: 8, jan7: 25, feb4: 54, apr8: 23, may6: 0, jun10: 36, jul22: 3, sep9: 9, sep30: 18, nov4: 10, dec2: 12, jan6: 4, feb3: 17, jun30: 11, jul9: 12, oct8: 40, nov5: 69, jun3: 5, jun25app: 0, jun25arn: 3, jun25bud: 1, mar31: 0, apr15: 12, sep26: 1, jan6b: 40, apr14: 2 },
+      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: true, may6: false, jun10: true, jul22: true, sep9: true, sep30: true, nov4: true, dec2: true, jan6: true, feb3: true, jun30: true, jul9: true, oct8: true, nov5: true, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: true, may12: true },
+      speaker_turns: { dec3: 22, dec23: 8, jan7: 25, feb4: 54, apr8: 23, may6: 0, jun10: 36, jul22: 3, sep9: 9, sep30: 18, nov4: 10, dec2: 12, jan6: 4, feb3: 17, jun30: 11, jul9: 12, oct8: 40, nov5: 69, jun3: 5, jun25app: 0, jun25arn: 3, jun25bud: 1, mar31: 0, apr15: 12, sep26: 1, jan6b: 40, apr14: 2, may12: 32 },
       vote_alignment_with_mayor: 0.67,
       note: { he: "נוכחות מלאה. הצביעה נגד עמדת ראש המועצה בהמלצת ועדת ביקורת, אך בעד תקציב 2026. העלתה את שאלת הנגישות בשפה האנגלית בנושא מדיניות הטעינה.", en: "Perfect attendance. Voted against the mayor's position on the audit-committee recommendation, but supported the 2026 budget. Raised the accessibility-for-English-speakers concern during the EV-charging policy debate." }
     },
@@ -107,8 +107,8 @@ const COUNCIL_DATA = {
       he: "ישי יעקב פליישר",
       en: "Yishai Fleisher",
       role: { he: "חבר מועצה", en: "Council Member" },
-      attendance: { dec3: false, dec23: true, jan7: true, feb4: true, apr8: true, may6: true, jun10: false, jul22: true, sep9: false, sep30: true, nov4: true, dec2: true, jan6: true, feb3: true, jun30: true, jul9: true, oct8: true, nov5: true, jun3: false, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: true },
-      speaker_turns: { dec3: 0, dec23: 3, jan7: 8, feb4: 9, apr8: 16, may6: 14, jun10: 0, jul22: 13, sep9: 0, sep30: 4, nov4: 11, dec2: 21, jan6: 5, feb3: 18, jun30: 3, jul9: 7, oct8: 47, nov5: 30, jun3: 0, jun25app: 2, jun25arn: 3, jun25bud: 6, mar31: 0, apr15: 1, sep26: 2, jan6b: 3, apr14: 5 },
+      attendance: { dec3: false, dec23: true, jan7: true, feb4: true, apr8: true, may6: true, jun10: false, jul22: true, sep9: false, sep30: true, nov4: true, dec2: true, jan6: true, feb3: true, jun30: true, jul9: true, oct8: true, nov5: true, jun3: false, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: true, apr14: true, may12: true },
+      speaker_turns: { dec3: 0, dec23: 3, jan7: 8, feb4: 9, apr8: 16, may6: 14, jun10: 0, jul22: 13, sep9: 0, sep30: 4, nov4: 11, dec2: 21, jan6: 5, feb3: 18, jun30: 3, jul9: 7, oct8: 47, nov5: 30, jun3: 0, jun25app: 2, jun25arn: 3, jun25bud: 6, mar31: 0, apr15: 1, sep26: 2, jan6b: 3, apr14: 5, may12: 43 },
       vote_alignment_with_mayor: 0.67,
       note: { he: "נוכחות מלאה. הצביע נגד עמדת ראש המועצה בקיזוזים אך בעד תקציב 2026.", en: "Perfect attendance. Voted against the mayor's position on tax-offsets but supported the 2026 budget." }
     },
@@ -118,8 +118,8 @@ const COUNCIL_DATA = {
       he: "שלמה בן צבי",
       en: "Shlomo Ben Tzvi",
       role: { he: "חבר מועצה", en: "Council Member" },
-      attendance: { dec3: false, dec23: true, jan7: false, feb4: false, apr8: true, may6: true, jun10: true, jul22: false, sep9: false, sep30: true, nov4: true, dec2: true, jan6: false, feb3: true, jun30: true, jul9: true, oct8: true, nov5: true, jun3: false, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: false, apr14: false },
-      speaker_turns: { dec3: 0, dec23: 18, jan7: 0, feb4: 0, apr8: 0, may6: 1, jun10: 24, jul22: 0, sep9: 0, sep30: 19, nov4: 7, dec2: 22, jan6: 0, feb3: 17, jun30: 11, jul9: 15, oct8: 154, nov5: 42, jun3: 0, jun25app: 4, jun25arn: 36, jun25bud: 24, mar31: 0, apr15: 15, sep26: 1, jan6b: 0, apr14: 0 },
+      attendance: { dec3: false, dec23: true, jan7: false, feb4: false, apr8: true, may6: true, jun10: true, jul22: false, sep9: false, sep30: true, nov4: true, dec2: true, jan6: false, feb3: true, jun30: true, jul9: true, oct8: true, nov5: true, jun3: false, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: true, jan6b: false, apr14: false, may12: false },
+      speaker_turns: { dec3: 0, dec23: 18, jan7: 0, feb4: 0, apr8: 0, may6: 1, jun10: 24, jul22: 0, sep9: 0, sep30: 19, nov4: 7, dec2: 22, jan6: 0, feb3: 17, jun30: 11, jul9: 15, oct8: 154, nov5: 42, jun3: 0, jun25app: 4, jun25arn: 36, jun25bud: 24, mar31: 0, apr15: 15, sep26: 1, jan6b: 0, apr14: 0, may12: 0 },
       vote_alignment_with_mayor: 0.5,
       note: { he: "החסיר את ישיבת התקציב. בחר במכוון \"לא משתתף\" באישור פרוטוקול ישיבת התקציב (לאחר שיונתן מרקוס הסביר את ההבדל בין \"נמנע\" ל\"לא משתתף\"). נמנע במדיניות הטעינה.", en: "Missed budget meeting. Deliberately chose \"not participating\" rather than \"abstain\" on approving the budget protocol (after the staff explained the procedural difference). Abstained on the EV-charging policy." }
     },
@@ -129,8 +129,8 @@ const COUNCIL_DATA = {
       he: "טליה מרכוס",
       en: "Talia Marcus",
       role: { he: "חברת מועצה", en: "Council Member" },
-      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: true, may6: true, jun10: true, jul22: true, sep9: true, sep30: true, nov4: false, dec2: true, jan6: true, feb3: true, jun30: false, jul9: false, oct8: true, nov5: true, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: false, apr15: false, sep26: true, jan6b: true, apr14: true },
-      speaker_turns: { dec3: 20, dec23: 3, jan7: 10, feb4: 55, apr8: 28, may6: 40, jun10: 35, jul22: 4, sep9: 32, sep30: 25, nov4: 0, dec2: 8, jan6: 10, feb3: 20, jun30: 0, jul9: 0, oct8: 41, nov5: 39, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 1, jan6b: 9, apr14: 0 },
+      attendance: { dec3: true, dec23: true, jan7: true, feb4: true, apr8: true, may6: true, jun10: true, jul22: true, sep9: true, sep30: true, nov4: false, dec2: true, jan6: true, feb3: true, jun30: false, jul9: false, oct8: true, nov5: true, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: false, apr15: false, sep26: true, jan6b: true, apr14: true, may12: false },
+      speaker_turns: { dec3: 20, dec23: 3, jan7: 10, feb4: 55, apr8: 28, may6: 40, jun10: 35, jul22: 4, sep9: 32, sep30: 25, nov4: 0, dec2: 8, jan6: 10, feb3: 20, jun30: 0, jul9: 0, oct8: 41, nov5: 39, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 1, jan6b: 9, apr14: 0, may12: 0 },
       vote_alignment_with_mayor: 0.67,
       note: { he: "החסירה את ישיבת התקציב המקורית אך נכחה באישור הפרוטוקול. הובילה את התפילה במליאה. הצביעה נגד עמדת ראש המועצה בקיזוזים אך בעד תקציב 2026.", en: "Missed the original budget meeting but was present at protocol approval. Led the opening prayer in Dec. Voted against the mayor's position on the audit dispute but supported the 2026 budget." }
     },
@@ -141,8 +141,8 @@ const COUNCIL_DATA = {
       en: "Oded Ravivi",
       role: { he: "חבר מועצה (לשעבר)", en: "Council Member (former)" },
       former: true,
-      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: true, jul9: true, oct8: false, nov5: false, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: false, jan6b: false, apr14: false },
-      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 60, jul9: 35, oct8: 0, nov5: 0, jun3: 40, jun25app: 24, jun25arn: 35, jun25bud: 57, mar31: 6, apr15: 50, sep26: 0, jan6b: 0, apr14: 0 },
+      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: true, jul9: true, oct8: false, nov5: false, jun3: true, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: false, jan6b: false, apr14: false, may12: false },
+      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 60, jul9: 35, oct8: 0, nov5: 0, jun3: 40, jun25app: 24, jun25arn: 35, jun25bud: 57, mar31: 6, apr15: 50, sep26: 0, jan6b: 0, apr14: 0, may12: 0 },
       vote_alignment_with_mayor: 0.86,
       note: { he: "כיהן במועצה בשנת 2024 (מופיע בפרוטוקולים שלפני דצמבר 2024) — ראש המועצה לשעבר של אפרת. בישיבת 30.6.2024 היה ההצבעה היחידה נגד צו הארנונה החדש לחניון הקניון.", en: "Served on the council in 2024 (appears in the pre-December 2024 protocols) — a former mayor of Efrat. At the June 30, 2024 meeting he cast the only 'no' vote against the new mall-parking tax order." }
     },
@@ -153,8 +153,8 @@ const COUNCIL_DATA = {
       en: "Orit Samuels",
       role: { he: "חברת מועצה (לשעבר)", en: "Council Member (former)" },
       former: true,
-      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: false, oct8: false, nov5: false, jun3: true, jun25app: false, jun25arn: false, jun25bud: false, mar31: false, apr15: false, sep26: false, jan6b: false, apr14: false },
-      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 0, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0 },
+      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: false, oct8: false, nov5: false, jun3: true, jun25app: false, jun25arn: false, jun25bud: false, mar31: false, apr15: false, sep26: false, jan6b: false, apr14: false, may12: false },
+      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 0, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0, may12: 0 },
       vote_alignment_with_mayor: null,
       note: { he: "חברת מועצה בשנת 2024. נעדרה משתי הישיבות שתועדו בתקופת כהונתה (30.6 ו-9.7.2024).", en: "Council member in 2024. Was absent from both recorded meetings during her tenure (June 30 and July 9, 2024)." }
     },
@@ -165,8 +165,8 @@ const COUNCIL_DATA = {
       en: "Tamar Amar",
       role: { he: "חברת מועצה (לשעבר)", en: "Council Member (former)" },
       former: true,
-      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: true, oct8: false, nov5: false, jun3: false, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: false, jan6b: false, apr14: false },
-      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 21, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 2, jun25bud: 8, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0 },
+      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: true, oct8: false, nov5: false, jun3: false, jun25app: true, jun25arn: true, jun25bud: true, mar31: true, apr15: true, sep26: false, jan6b: false, apr14: false, may12: false },
+      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 21, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 2, jun25bud: 8, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0, may12: 0 },
       vote_alignment_with_mayor: 1.0,
       note: { he: "חברת מועצה בשנת 2024. נכחה בישיבת 9.7.2024 והצביעה עם הרוב.", en: "Council member in 2024. Attended the July 9, 2024 meeting and voted with the majority." }
     },
@@ -177,8 +177,8 @@ const COUNCIL_DATA = {
       role: { he: "חבר מועצה (לשעבר)", en: "Council Member (former)" },
       former: true,
       council_from: "2024-01-01", council_to: "2024-05-01",
-      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: false, oct8: false, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: true, apr15: true, sep26: false, jan6b: false, apr14: false },
-      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 0, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0 },
+      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: false, oct8: false, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: true, apr15: true, sep26: false, jan6b: false, apr14: false, may12: false },
+      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 0, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0, may12: 0 },
       vote_alignment_with_mayor: null,
       note: { he: "חברת מועצה במליאה שהושבעה במרץ 2024. נכחה בישיבת הכינון ובישיבת אפריל; אינה מופיעה בפרוטוקולים מיוני 2024 ואילך.", en: "A member of the council sworn in in March 2024. Attended the inaugural and April meetings; does not appear in the protocols from June 2024 onward." }
     },
@@ -189,8 +189,8 @@ const COUNCIL_DATA = {
       role: { he: "חבר מועצה (לשעבר)", en: "Council Member (former)" },
       former: true,
       council_from: "2024-01-01", council_to: "2024-05-01",
-      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: false, oct8: false, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: true, apr15: true, sep26: false, jan6b: false, apr14: false },
-      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 0, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0 },
+      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: false, oct8: false, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: true, apr15: true, sep26: false, jan6b: false, apr14: false, may12: false },
+      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 0, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0, may12: 0 },
       vote_alignment_with_mayor: null,
       note: { he: "חבר מועצה במליאה שהושבעה במרץ 2024. נכח בישיבת הכינון ובישיבת אפריל; אינו מופיע בפרוטוקולים מיוני 2024 ואילך.", en: "A member of the council sworn in in March 2024. Attended the inaugural and April meetings; does not appear in the protocols from June 2024 onward." }
     },
@@ -201,8 +201,8 @@ const COUNCIL_DATA = {
       role: { he: "חבר מועצה (לשעבר)", en: "Council Member (former)" },
       former: true,
       council_from: "2024-01-01", council_to: "2024-05-01",
-      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: false, oct8: false, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: false, apr15: false, sep26: false, jan6b: false, apr14: false },
-      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 0, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0 },
+      attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: false, oct8: false, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: false, apr15: false, sep26: false, jan6b: false, apr14: false, may12: false },
+      speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 0, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0, may12: 0 },
       vote_alignment_with_mayor: null,
       note: { he: "חבר מועצה במליאה שהושבעה במרץ 2024. נעדר משתי הישיבות שתועדו בתקופתו (31.3 ו-15.4.2024); אינו מופיע מיוני 2024 ואילך.", en: "A member of the council sworn in in March 2024. Was absent from both recorded meetings during his tenure (March 31 and April 15, 2024); does not appear from June 2024 onward." }
     }
@@ -1060,15 +1060,84 @@ const COUNCIL_DATA = {
           details: { he: "ראש המועצה סקר: המשבר סביב 'כוכב יהודה' (עליית קבוצת עמותת נחלה, שכוללת אנשים מחוות עיטם, לשלוחה בין החווה לצומת תקוע) ושחרור תושב אפרת ממעצר בית; בית הטהרה בבית העלמין כפר עציון שבנייתו הסתיימה (כ-2.15 מיליון ש\"ח דרך קרן אפרת); חפירת חלקת קבר חדשה (כ-300 מקומות, מספיק לכ-7 שנים); אישור צפוי של משרד הדתות להקמת מועצה דתית (במשותף עם קריית ארבע); הכנת קרקע לשכונת קרוואנים חדשה; ומקלטים ומיגוניות. אריאלה פרי בירכה את מנחם שפיץ לרגל בחירת נכדו, ארי שפיץ, שנפצע בעזה, להדליק משואה ביום העצמאות.", en: "The mayor reviewed: the 'Kochav Yehuda' crisis (a Nachala-association group, including people from Eitam Farm, ascending a ridge between the farm and the Tekoa junction) and the release of an Efrat resident from house arrest; the purity house at the Kfar Etzion cemetery, now built (~₪2.15M via the Efrat Fund); digging of a new burial section (~300 plots, enough for ~7 years); the Religious Affairs Ministry's expected approval of a religious council (jointly with Kiryat Arba); ground preparation for a new caravan neighborhood; and bomb shelters. Ariella Perry congratulated Menachem Spitz on his grandson Ari Spitz — wounded in Gaza — being chosen to light a torch on Independence Day." } }
       ]
     },
+    {
+      id: "may12",
+      date: "2026-05-12",
+      hebrew_date: "כ\"ה אייר התשפ\"ו",
+      title: { he: "ישיבת מועצה מן המניין", en: "Regular Council Meeting" },
+      attendance_count: 7,
+      absent: ["Shlomo Ben Tzvi", "Avi Hadida", "Avital Cohen", "Talia Marcus"],
+      total_speaker_turns: 224,
+      agenda: [
+        { num: 1, he: "דבר תורה", en: "Torah teaching",
+          details: { he: "דבר תורה לפתיחת הישיבה, סביב פרשת השבוע וחג השבועות הקרב.", en: "An opening Torah teaching, tied to the weekly portion and the approaching Shavuot festival." } },
+        { num: 2, he: "אישור פרוטוקול ישיבת מועצה מן המניין 14.4.26", en: "Approval of the Apr 14, 2026 protocol",
+          details: { he: "אושר ברוב קולות (6 בעד); חנני פייגין נמנע.", en: "Approved by majority (6 for); Hanani Feigin abstained." } },
+        { num: 3, he: "עדכון שכר", en: "Salary update",
+          details: { he: "אושר פה אחד עדכון שכר של רויטל קולין ב-2.5%.", en: "A 2.5% salary update for staffer Reuvital Kolin was approved unanimously." } },
+        { num: 4, he: "אישור תב\"ר 941 — פעילות נגד אלימות במשפחה", en: "Approve TaBaR 941 — domestic-violence prevention",
+          details: { he: "אושר פה אחד תב\"ר 941 לפעילות נגד אלימות במשפחה.", en: "TaBaR 941, funding activity against domestic violence, was approved unanimously." } },
+        { num: 5, he: "אישור העסקת קבלן לגרירת רכבים נטושים", en: "Approve hiring a contractor to tow abandoned vehicles",
+          details: { he: "לאחר שנכשלו ארבעה מכרזים קודמים, אושר פה אחד להעסיק קבלן לגרירת רכבים נטושים ללא מכרז.", en: "After four prior tenders failed, the council unanimously approved hiring a vehicle-towing contractor without a tender." } },
+        { num: 6, he: "אישור תיקון חוק עזר אגרת מבני ציבור", en: "Approve amendment to the public-buildings fee by-law",
+          details: { he: "עדכון התעריפים של אגרת והיטל מבני ציבור, שנועד לחזק את קרנות מבני הציבור הדלות של המועצה כדי לאפשר בנייה ציבורית בשכונות חדשות וישנות. אושר פה אחד. צורי דותן ציין שגם התעריף המעודכן נמוך — פרויקט של 512 יח\"ד מניב כ-15 מיליון ש\"ח בלבד.", en: "An update to public-buildings fees and levies, meant to rebuild the council's thin public-buildings reserves so it can fund public construction in new and old neighborhoods. Approved unanimously. Tzuri Dotan noted that even the updated rate is low — a 512-unit project yields only about ₪15M." } },
+        { num: 7, he: "סקירה — ועדת קליטה (ישי פליישר)", en: "Review — absorption committee (Yishai Fleisher)",
+          details: { he: "ישי פליישר סקר את פעילות ועדת הקליטה: עלייה לאפרת, הקושי הגובר בלימוד עברית לדוברי אנגלית, ואולפני עברית למבוגרים הפועלים בבית ספר אלומים בדגן. ללא הצבעה.", en: "Yishai Fleisher reviewed the absorption committee's work: aliyah to Efrat, the growing difficulty English-speakers face learning Hebrew, and adult Hebrew ulpan classes running at the Alumim school in Dagan. No vote." } },
+        { num: 8, he: "קמפיין שבועות של קרן אפרת (יונתן מרקוס)", en: "Keren Efrat Shavuot campaign (Yonatan Marcus)",
+          details: { he: "יונתן מרקוס הציג את קמפיין השבועות של קרן אפרת. ללא הצבעה.", en: "Yonatan Marcus presented the Efrat Fund's Shavuot fundraising campaign. No vote." } },
+        { num: 9, he: "עדכוני ראש מועצה", en: "Mayor's updates",
+          details: { he: "עיקרי העדכונים: המועצה הדתית החדשה נכנסה לתוקף ב-1 במאי, וב-3 במאי נבחר פה אחד הרב דוד מרקוס לראש המועצה הדתית — שניגש מיד לסוגיית הרחבת בית העלמין; 15 מתוך 40 אוטובוסים חדשים (מונעי גז) כבר פעילים בקווי האזור; פגישה נוספת במשרד השיכון על מורדות הזית, עם יעד לצאת לשיווק של לפחות 400 יח\"ד תוך חודשיים; וסיכום אירועי יום העצמאות (כולל בעיית תרסיסי השלג).", en: "Highlights: the new religious council took effect on May 1, and on May 3 Rabbi David Marcus was elected (unanimously) to head it — immediately taking on the urgent cemetery-expansion issue; 15 of 40 new gas-powered buses are already running on regional lines; another Housing Ministry meeting on Mordot HaZayit, with a target to market at least 400 units within two months; and an Independence Day events recap (including a snow-spray safety problem)." } }
+      ]
+    }
   ],
 
   // Each vote records position for every voting member. Possible values: "for", "against", "abstain", "not_voting", "absent"
   votes: [
     {
+      id: "vm12a",
+      meeting: "may12",
+      title: { he: "אישור פרוטוקול ישיבת מועצה 14.4.26", en: "Approval of the Apr 14, 2026 protocol" },
+      result: { he: "עבר; חנני פייגין נמנע", en: "Passed; Hanani Feigin abstained" },
+      controversy: 1,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "abstain", "avi-hadida": "absent", "dana-spiegel": "for", "menachem-spitz": "for", "avital-cohen": "absent", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "absent", "talia-marcus": "absent" }
+    },
+    {
+      id: "vm12b",
+      meeting: "may12",
+      title: { he: "עדכון שכר רויטל קולין ב-2.5%", en: "2.5% salary update for Reuvital Kolin" },
+      result: { he: "פה אחד", en: "Unanimous" },
+      controversy: 1,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "absent", "dana-spiegel": "for", "menachem-spitz": "for", "avital-cohen": "absent", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "absent", "talia-marcus": "absent" }
+    },
+    {
+      id: "vm12c",
+      meeting: "may12",
+      title: { he: "אישור תב\"ר 941 — פעילות נגד אלימות במשפחה", en: "Approve TaBaR 941 — domestic-violence prevention" },
+      result: { he: "פה אחד", en: "Unanimous" },
+      controversy: 1,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "absent", "dana-spiegel": "for", "menachem-spitz": "for", "avital-cohen": "absent", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "absent", "talia-marcus": "absent" }
+    },
+    {
+      id: "vm12d",
+      meeting: "may12",
+      title: { he: "אישור העסקת קבלן לגרירת רכבים נטושים (ללא מכרז)", en: "Approve hiring a vehicle-towing contractor (no tender)" },
+      result: { he: "פה אחד", en: "Unanimous" },
+      controversy: 1,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "absent", "dana-spiegel": "for", "menachem-spitz": "for", "avital-cohen": "absent", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "absent", "talia-marcus": "absent" }
+    },
+    {
+      id: "vm12e",
+      meeting: "may12",
+      title: { he: "אישור תיקון חוק עזר אגרת מבני ציבור", en: "Approve amendment to the public-buildings fee by-law" },
+      result: { he: "פה אחד", en: "Unanimous" },
+      controversy: 1,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "absent", "dana-spiegel": "for", "menachem-spitz": "for", "avital-cohen": "absent", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "absent", "talia-marcus": "absent" }
+    },
+    {
       id: "vs26",
       meeting: "sep26",
       title: { he: "אישור נסיעת ראש המועצה לארה\"ב (משלחת מועצת יש\"ע)", en: "Approve the mayor's trip to the USA (Yesha Council delegation)" },
-      result: { he: "ברוב קולות; אבי חדידה ומנחם שפיץ נמנעו", en: "Majority; Avi Hadida and Menachem Spitz abstained" },
+      result: { he: "עבר; אבי חדידה ומנחם שפיץ נמנעו", en: "Passed; Avi Hadida and Menachem Spitz abstained" },
       controversy: 2,
       positions: {
         "dovi-shefler": "for",
@@ -1108,7 +1177,7 @@ const COUNCIL_DATA = {
       id: "vj6b2",
       meeting: "jan6b",
       title: { he: "אישור הקצאת קרקע לבית כנסת על גג גן הילדים ברחוב נחמיה", en: "Approve land allocation for a synagogue on the kindergarten roof (Nehemiah St.)" },
-      result: { he: "ברוב קולות (7 בעד); אריאלה פרי נגד", en: "Majority (7 for); Ariella Perry against" },
+      result: { he: "עבר (7 בעד); אריאלה פרי נגד", en: "Passed (7 for); Ariella Perry against" },
       controversy: 3,
       positions: {
         "dovi-shefler": "for",
@@ -1208,7 +1277,7 @@ const COUNCIL_DATA = {
       id: "vf4",
       meeting: "feb4",
       title: { he: "אישור פרוטוקול 07.01.2025", en: "Approval of Jan 7, 2025 protocol" },
-      result: { he: "ברוב קולות; אבי חדידה וחנני פייגין נמנעו", en: "Majority; Avi Hadida and Hanani Feigin abstained" },
+      result: { he: "עבר; אבי חדידה וחנני פייגין נמנעו", en: "Passed; Avi Hadida and Hanani Feigin abstained" },
       controversy: 2,
       positions: {
         "dovi-shefler": "for",
@@ -1288,7 +1357,7 @@ const COUNCIL_DATA = {
       id: "vf8",
       meeting: "feb4",
       title: { he: "תב\"ר 888 - רכב קב\"ט", en: "TaBaR 888 — security officer vehicle" },
-      result: { he: "ברוב קולות; אביטל נגד", en: "Majority; Avital against" },
+      result: { he: "עבר; אביטל נגד", en: "Passed; Avital against" },
       controversy: 3,
       positions: {
         "dovi-shefler": "for",
@@ -1488,7 +1557,7 @@ const COUNCIL_DATA = {
       id: "vm4",
       meeting: "may6",
       title: { he: "תב\"ר עיצוב ושיפור חזית", en: "TaBaR — facade design and improvement" },
-      result: { he: "ברוב קולות (7 בעד, 2 נמנעו)", en: "Majority (7 for, 2 abstain)" },
+      result: { he: "עבר (7 בעד, 2 נמנעו)", en: "Passed (7 for, 2 abstain)" },
       controversy: 2,
       positions: {
         "dovi-shefler": "for",
@@ -1548,7 +1617,7 @@ const COUNCIL_DATA = {
       id: "vm7",
       meeting: "may6",
       title: { he: "החלפת חבר הנהלת המתנ\"ס", en: "Replace community-center board member" },
-      result: { he: "ברוב קולות; שלמה נמנע", en: "Majority; Shlomo abstained" },
+      result: { he: "עבר; שלמה נמנע", en: "Passed; Shlomo abstained" },
       controversy: 2,
       positions: {
         "dovi-shefler": "for",
@@ -1667,7 +1736,7 @@ const COUNCIL_DATA = {
       id: "vg4",
       meeting: "jun10",
       title: { he: "דחיית ישיבת המועצה הבאה ל-15.7", en: "Push next meeting to July 15" },
-      result: { he: "ברוב קולות 7-1 (1 נמנע)", en: "Majority 7-1 (1 abstain)" },
+      result: { he: "עבר 7-1 (1 נמנע)", en: "Passed 7-1 (1 abstain)" },
       controversy: 2,
       note: { he: "הוויכוח היחיד של הישיבה. אחר כך הוחלט על 22.7 בהסכמה כללית.", en: "The meeting's only split vote. Later rescheduled to July 22 by consent." },
       positions: {
@@ -1834,7 +1903,7 @@ const COUNCIL_DATA = {
       id: "vsp1",
       meeting: "sep9",
       title: { he: "אישור פרוטוקול 22.7.25", en: "Approval of July 22 protocol" },
-      result: { he: "אושר; אבי חדידה נמנע", en: "Approved; Avi Hadida abstained" },
+      result: { he: "עבר; אבי חדידה נמנע", en: "Passed; Avi Hadida abstained" },
       controversy: 1,
       positions: {
         "dovi-shefler": "for",
@@ -1874,7 +1943,7 @@ const COUNCIL_DATA = {
       id: "vsp3",
       meeting: "sep9",
       title: { he: "תב\"ר 928-111508 - קייטנות חופש קיץ", en: "TaBaR 928-111508 — summer camp funding" },
-      result: { he: "ברוב קולות; אביטל נגד", en: "Majority; Avital against" },
+      result: { he: "עבר; אביטל נגד", en: "Passed; Avital against" },
       controversy: 3,
       note: { he: "אביטל כהן הצביעה נגד בטענה שהרישום בשיטת \"כל הקודם זוכה\" לא הוגן לחד-הוריות, ילדים עם צרכים מיוחדים, ומחוננים.", en: "Avital Cohen voted against, arguing that first-come-first-served registration is unfair to single-parent families, special-needs and gifted children." },
       positions: {
@@ -1895,7 +1964,7 @@ const COUNCIL_DATA = {
       id: "vs1",
       meeting: "sep30",
       title: { he: "עדכון תקציב 2025 - קיצוץ ל-137.79M ש\"ח", en: "2025 Budget Update — cut to ₪137.79M" },
-      result: { he: "ברוב קולות 5-2 (2 נמנעו)", en: "Majority 5-2 (2 abstain)" },
+      result: { he: "עבר 5-2 (2 נמנעו)", en: "Passed 5-2 (2 abstain)" },
       controversy: 4,
       note: { he: "הצבעה משמעותית; שני חברים הצביעו נגד ועוד שניים נמנעו. ראש המועצה ואביטל נעדרו.", en: "A meaningful split; two members voted against and two abstained. Mayor and Avital were absent." },
       positions: {
@@ -1948,7 +2017,7 @@ const COUNCIL_DATA = {
       id: "vs5",
       meeting: "sep30",
       title: { he: "אישור פרוטוקול ישיבת 25.9.25", en: "Approval of Sep 25 extraordinary protocol" },
-      result: { he: "ברוב קולות", en: "Majority" },
+      result: { he: "עבר", en: "Passed" },
       controversy: 1,
       positions: {
         "dovi-shefler": "absent", "tzuri-dotan": "for", "hanani-feigin": "for",
@@ -2094,7 +2163,7 @@ const COUNCIL_DATA = {
       id: "v4",
       meeting: "dec2",
       title: { he: "דוח מבקר 2022-23 כולל המלצה למניעת קיזוזי חובות לספקים וארנונה", en: "Audit report 2022-23 INCLUDING the controversial recommendation against debt-offsets" },
-      result: { he: "ברוב קולות (7-4)", en: "Majority 7-4 — the mayor lost this vote" },
+      result: { he: "עבר (7-4)", en: "Passed 7-4 — the mayor lost this vote" },
       controversy: 5,
       note: { he: "המלצה זו אומצה בניגוד לעמדת המבקרת. ראש המועצה הצביע נגד.", en: "The committee's recommendation contradicted the (then) auditor's opinion. The mayor and 3 others voted against; 7 members supported the recommendation." },
       positions: {
@@ -2132,7 +2201,7 @@ const COUNCIL_DATA = {
       id: "v8",
       meeting: "dec2",
       title: { he: "תב\"ר 840 - שיקום כבישים ₪270K", en: "TaBaR 840 - road rehabilitation ₪270K" },
-      result: { he: "ברוב קולות; נמנע: צורי דותן", en: "Majority; abstain: Tzuri Dotan" },
+      result: { he: "עבר; נמנע: צורי דותן", en: "Passed; abstain: Tzuri Dotan" },
       controversy: 2,
       positions: {
         "dovi-shefler": "for", "tzuri-dotan": "abstain", "hanani-feigin": "for",
@@ -2169,7 +2238,7 @@ const COUNCIL_DATA = {
       id: "v12",
       meeting: "dec2",
       title: { he: "תב\"ר 572 - מרכז ספורט ₪39.1M", en: "TaBaR 572 - sports center ₪39.1M" },
-      result: { he: "ברוב קולות", en: "Majority" },
+      result: { he: "עבר", en: "Passed" },
       controversy: 2,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "dana-spiegel": "for", "menachem-spitz": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "talia-marcus": "for" }
     },
@@ -2177,7 +2246,7 @@ const COUNCIL_DATA = {
       id: "v13",
       meeting: "dec2",
       title: { he: "תב\"ר 809 - פעולות למען קהילות ₪838K", en: "TaBaR 809 - community-actions support ₪838K" },
-      result: { he: "ברוב קולות", en: "Majority" },
+      result: { he: "עבר", en: "Passed" },
       controversy: 2,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "dana-spiegel": "for", "menachem-spitz": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "talia-marcus": "for" }
     },
@@ -2193,7 +2262,7 @@ const COUNCIL_DATA = {
       id: "v15",
       meeting: "dec2",
       title: { he: "שימוש בכספי מפעל הפיס לצמצום הגירעון", en: "Use Mifal HaPais funds to reduce the deficit" },
-      result: { he: "ברוב קולות", en: "Majority" },
+      result: { he: "עבר", en: "Passed" },
       controversy: 2,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "dana-spiegel": "for", "menachem-spitz": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "talia-marcus": "for" }
     },
@@ -2209,7 +2278,7 @@ const COUNCIL_DATA = {
       id: "v17",
       meeting: "jan6",
       title: { he: "אישור תקציב המועצה לשנת 2026 (144,258,000 ₪)", en: "Approval of 2026 council budget (₪144,258,000)" },
-      result: { he: "7 בעד, 1 נגד (אבי חדידה)", en: "7 for, 1 against (Avi Hadida)" },
+      result: { he: "עבר; 7 בעד, 1 נגד (אבי חדידה)", en: "Passed; 7 for, 1 against (Avi Hadida)" },
       controversy: 4,
       note: { he: "ההצבעה היחידה כנגד התקציב; שלושה חברים נעדרו (צורי, חנני, שלמה)", en: "The single dissenting vote on the budget; three members absent (Tzuri, Hanani, Shlomo)." },
       positions: {
@@ -2223,7 +2292,7 @@ const COUNCIL_DATA = {
       id: "v18",
       meeting: "feb3",
       title: { he: "אישור פרוטוקול ישיבת תקציב 6.1.26", en: "Approval of Jan 6 budget protocol" },
-      result: { he: "ברוב קולות; נמנע: חנני; לא משתתף: שלמה", en: "Majority; abstain: Hanani; not participating: Shlomo" },
+      result: { he: "עבר; נמנע: חנני; לא משתתף: שלמה", en: "Passed; abstain: Hanani; not participating: Shlomo" },
       controversy: 2,
       positions: {
         "dovi-shefler": "for", "tzuri-dotan": "absent", "hanani-feigin": "abstain",
@@ -2249,7 +2318,7 @@ const COUNCIL_DATA = {
       id: "v20",
       meeting: "feb3",
       title: { he: "מדיניות עמדות פרטיות לטעינת רכב חשמלי", en: "Private EV charging-station policy" },
-      result: { he: "ברוב קולות; נמנע: שלמה בן צבי", en: "Majority; abstain: Shlomo Ben Tzvi" },
+      result: { he: "עבר; נמנע: שלמה בן צבי", en: "Passed; abstain: Shlomo Ben Tzvi" },
       controversy: 3,
       note: { he: "דיון נרחב לגבי החלת הגבלת 8 שעות, שבסופו הוסרה. אריאלה העלתה את שאלת הנגישות לדוברי אנגלית.", en: "Substantial debate over an 8-hour parking restriction (later removed). Ariella raised the issue of accessibility for English-speaking residents." },
       positions: {
@@ -2314,7 +2383,7 @@ const COUNCIL_DATA = {
     {
       id: "vj30_1", meeting: "jun30",
       title: { he: "צו ארנונה — תעריף לחניון מקורה בקניון (45 ש״ח/מ״ר)", en: "Property-tax order — covered mall-parking tariff (NIS 45/sqm)" },
-      result: { he: "ברוב קולות (7 בעד, נגד 1, נמנע 1)", en: "By majority (7 for, 1 against, 1 abstain)" },
+      result: { he: "עבר (7 בעד, נגד 1, נמנע 1)", en: "Passed (7 for, 1 against, 1 abstain)" },
       note: { he: "עודד רביבי נגד; אבי חדידה נמנע.", en: "Oded Ravivi against; Avi Hadida abstained." },
       controversy: 3,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "abstain", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "against" }
@@ -2346,7 +2415,7 @@ const COUNCIL_DATA = {
     {
       id: "vj9_5", meeting: "jul9",
       title: { he: "תב״ר נוסף (כ-640 אלף ש״ח)", en: "Further TaBaR (~NIS 640K)" },
-      result: { he: "אושר; צורי דותן נמנע", en: "Approved; Tzuri Dotan abstained" },
+      result: { he: "עבר; צורי דותן נמנע", en: "Passed; Tzuri Dotan abstained" },
       note: { he: "אביטל כהן לא נכחה בהצבעה זו.", en: "Avital Cohen was not present for this vote." },
       controversy: 2,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "abstain", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "not_voting", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for" }
@@ -2360,13 +2429,13 @@ const COUNCIL_DATA = {
     {
       id: "vj9_7", meeting: "jul9",
       title: { he: "אישור פרוטוקול 3.6.2024", en: "Approval of the June 3, 2024 protocol" },
-      result: { he: "אושר; אבי חדידה נמנע", en: "Approved; Avi Hadida abstained" }, controversy: 2,
+      result: { he: "עבר; אבי חדידה נמנע", en: "Passed; Avi Hadida abstained" }, controversy: 2,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "abstain", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for" }
     },
     {
       id: "vj9_8", meeting: "jul9",
       title: { he: "מינוי תושבים לחברי ועדות", en: "Appoint residents to committees" },
-      result: { he: "ברוב קולות; אבי חדידה ושלמה בן צבי נמנעו", en: "By majority; Avi Hadida and Shlomo Ben Tzvi abstained" }, controversy: 2,
+      result: { he: "עבר; אבי חדידה ושלמה בן צבי נמנעו", en: "Passed; Avi Hadida and Shlomo Ben Tzvi abstained" }, controversy: 2,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "abstain", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "abstain", "oded-ravivi": "for", "tamar-amar": "for" }
     },
     {
@@ -2384,7 +2453,7 @@ const COUNCIL_DATA = {
     {
       id: "vo8_3", meeting: "oct8",
       title: { he: "מינוי אביטל כהן ליו״ר ועדה", en: "Appoint Avital Cohen as committee chair" },
-      result: { he: "ברוב קולות; מנחם שפיץ ודנה שפיגל נמנעו", en: "By majority; Menachem Spitz and Dana Spiegel abstained" }, controversy: 2,
+      result: { he: "עבר; מנחם שפיץ ודנה שפיגל נמנעו", en: "Passed; Menachem Spitz and Dana Spiegel abstained" }, controversy: 2,
       positions: { "dovi-shefler": "for", "hanani-feigin": "for", "dana-spiegel": "abstain", "menachem-spitz": "abstain", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "talia-marcus": "for" }
     },
     {
@@ -2396,7 +2465,7 @@ const COUNCIL_DATA = {
     {
       id: "vo8_5", meeting: "oct8",
       title: { he: "מינוי נציגים למועצה הדתית (4 שמות)", en: "Appoint Religious-Council representatives (4 names)" },
-      result: { he: "ברוב קולות (נגד 2, נמנע 1)", en: "By majority (2 against, 1 abstain)" },
+      result: { he: "עבר (נגד 2, נמנע 1)", en: "Passed (2 against, 1 abstain)" },
       note: { he: "מנחם שפיץ ושלמה בן צבי נגד; טליה מרכוס נמנעה.", en: "Menachem Spitz and Shlomo Ben Tzvi against; Talia Marcus abstained." },
       controversy: 3,
       positions: { "dovi-shefler": "for", "hanani-feigin": "for", "dana-spiegel": "for", "menachem-spitz": "against", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "against", "talia-marcus": "abstain" }
@@ -2446,7 +2515,7 @@ const COUNCIL_DATA = {
     {
       id: "vn5_1", meeting: "nov5",
       title: { he: "אישור פרוטוקול ישיבת 8.10.2024", en: "Approval of the Oct 8, 2024 protocol" },
-      result: { he: "ברוב קולות; אבי חדידה נמנע", en: "By majority; Avi Hadida abstained" }, controversy: 2,
+      result: { he: "עבר; אבי חדידה נמנע", en: "Passed; Avi Hadida abstained" }, controversy: 2,
       positions: { "dovi-shefler": "for", "hanani-feigin": "for", "avi-hadida": "abstain", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "talia-marcus": "for" }
     },
     {
@@ -2488,7 +2557,7 @@ const COUNCIL_DATA = {
     {
       id: "vj3_1", meeting: "jun3",
       title: { he: "אישור פרוטוקול ישיבת 7.5.2024", en: "Approval of the May 7, 2024 protocol" },
-      result: { he: "ברוב קולות", en: "By majority" },
+      result: { he: "עבר", en: "Passed" },
       note: { he: "עודד רביבי ואורית סמואלס הגיעו לאחר ההצבעה.", en: "Oded Ravivi and Orit Samuels arrived after the vote." },
       controversy: 1,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avital-cohen": "for", "ariella-perry": "for", "oded-ravivi": "not_voting", "orit-samuels": "not_voting" }
@@ -2496,7 +2565,7 @@ const COUNCIL_DATA = {
     {
       id: "vj25app_1", meeting: "jun25app",
       title: { he: "קביעת יו״ר לוועדות השונות", en: "Appoint chairs of the various committees" },
-      result: { he: "ברוב קולות (6 בעד, 2 נגד, נמנע 1)", en: "By majority (6 for, 2 against, 1 abstain)" },
+      result: { he: "עבר (6 בעד, 2 נגד, נמנע 1)", en: "Passed (6 for, 2 against, 1 abstain)" },
       note: { he: "עודד רביבי ושלמה בן צבי נגד; תמר עמר נמנעה.", en: "Oded Ravivi and Shlomo Ben Tzvi against; Tamar Amar abstained." },
       controversy: 3,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "against", "oded-ravivi": "against", "tamar-amar": "abstain" }
@@ -2504,7 +2573,7 @@ const COUNCIL_DATA = {
     {
       id: "vj25app_2", meeting: "jun25app",
       title: { he: "מינוי חברי דירקטוריון לחכ״ל ולמתנ״ס", en: "Appoint board directors (CHC & community center)" },
-      result: { he: "ברוב קולות", en: "By majority" },
+      result: { he: "עבר", en: "Passed" },
       note: { he: "עודד רביבי נגד; תמר עמר נמנעה.", en: "Oded Ravivi against; Tamar Amar abstained." },
       controversy: 2,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "against", "tamar-amar": "abstain" }
@@ -2512,7 +2581,7 @@ const COUNCIL_DATA = {
     {
       id: "vj25app_3", meeting: "jun25app",
       title: { he: "מינוי יו״ר ועדת רפואה (יהונתן מרקוס)", en: "Appoint medical-committee chair (Yonatan Marcus)" },
-      result: { he: "ברוב קולות", en: "By majority" },
+      result: { he: "עבר", en: "Passed" },
       note: { he: "עודד רביבי נגד; שלמה בן צבי ותמר עמר נמנעו.", en: "Oded Ravivi against; Shlomo Ben Tzvi and Tamar Amar abstained." },
       controversy: 2,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "abstain", "oded-ravivi": "against", "tamar-amar": "abstain" }
@@ -2520,7 +2589,7 @@ const COUNCIL_DATA = {
     {
       id: "vj25app_4", meeting: "jun25app",
       title: { he: "מינוי סגן וממלא מקום ראש המועצה (צורי דותן)", en: "Appoint deputy/acting mayor (Tzuri Dotan)" },
-      result: { he: "ברוב קולות (5 בעד, 3 נגד)", en: "By majority (5 for, 3 against)" },
+      result: { he: "עבר (5 בעד, 3 נגד)", en: "Passed (5 for, 3 against)" },
       note: { he: "עודד רביבי, תמר עמר ושלמה בן צבי נגד.", en: "Oded Ravivi, Tamar Amar and Shlomo Ben Tzvi against." },
       controversy: 3,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "not_voting", "hanani-feigin": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "against", "oded-ravivi": "against", "tamar-amar": "against" }
@@ -2528,7 +2597,7 @@ const COUNCIL_DATA = {
     {
       id: "vj25arn_1", meeting: "jun25arn",
       title: { he: "תוספת חריגה לארנונת מגורים ועסקים", en: "Exceptional surcharge on residential & business property tax" },
-      result: { he: "ברוב קולות (6 בעד, 3 נגד, נמנע 1)", en: "By majority (6 for, 3 against, 1 abstain)" },
+      result: { he: "עבר (6 בעד, 3 נגד, נמנע 1)", en: "Passed (6 for, 3 against, 1 abstain)" },
       note: { he: "שלמה בן צבי, אבי חדידה ועודד רביבי נגד; תמר עמר נמנעה.", en: "Shlomo Ben Tzvi, Avi Hadida and Oded Ravivi against; Tamar Amar abstained." },
       controversy: 3,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "against", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "against", "oded-ravivi": "against", "tamar-amar": "abstain" }
@@ -2536,7 +2605,7 @@ const COUNCIL_DATA = {
     {
       id: "vj25bud_1", meeting: "jun25bud",
       title: { he: "אישור תקציב 2024", en: "Approval of the 2024 budget" },
-      result: { he: "ברוב קולות (6 בעד, 4 נגד)", en: "By majority (6 for, 4 against)" },
+      result: { he: "עבר (6 בעד, 4 נגד)", en: "Passed (6 for, 4 against)" },
       note: { he: "עודד רביבי, תמר עמר, אבי חדידה ושלמה בן צבי נגד.", en: "Oded Ravivi, Tamar Amar, Avi Hadida and Shlomo Ben Tzvi against." },
       controversy: 3,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "against", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "against", "oded-ravivi": "against", "tamar-amar": "against" }
@@ -2748,7 +2817,7 @@ const COUNCIL_DATA = {
       he: "מורדות הזית - מאבק תכנוני",
       en: "Mordot HaZayit — planning battle",
       summary: { he: "פרויקט הבנייה הגדול של אפרת תקוע: משרד השיכון אישר לשיווק אך הודיע שחסר 200 מיליון ש\"ח לפיתוח. המועצה דורשת להעביר את הפרויקט אליה.", en: "Efrat's major construction project is stuck: Housing Ministry approved for marketing but reported a ₪200M shortfall. Council demands the project be transferred to it." },
-      meetings: ["nov4", "jan6b"],
+      meetings: ["nov4", "jan6b", "may12"],
       speakers: ["dovi-shefler", "avi-hadida", "hanani-feigin", "dana-spiegel", "yishai-fleisher"],
       detail: {
         he: "פרויקט בנייה גדול בדרום אפרת. אושר רשמית לשיווק, אך משרד השיכון הודיע שחסר 200 מיליון ש\"ח לפיתוח התשתיות. בחודש 9 שלחה המועצה מכתב עם דרישה: תוך 30 יום או פתרון, או שמעבירים את הפרויקט אליה (יחד עם רמ\"י). פוטנציאל של ~80 מיליון ש\"ח למבני ציבור ותשתיות. תאריך פרסום המכרז התעדכן מ-15.9 ל-15.11.",
@@ -2802,7 +2871,7 @@ const COUNCIL_DATA = {
       he: "תב\"רים ופרויקטים",
       en: "Capital projects (TaBaRs)",
       summary: { he: "ב-24 הישיבות אושרו 40+ תב\"רים מתועדים. הגדול ביניהם: מרכז ספורט ובריכה ₪39.1 מ' ש\"ח. כולל גם שיקום כבישים (₪11.26M + ₪270K), צנרת (₪2.4M), LPR לשערים, מצלמות, חינוך מיוחד, ומוכנות לחירום.", en: "Across the 24 meetings, 40+ documented TaBaRs were approved. Largest: sports center &amp; pool ₪39.1M. Others include road rehab (₪11.26M + ₪270K), pipes (₪2.4M), LPR gates, cameras, special education, and emergency readiness." },
-      meetings: ["apr15", "jul9", "oct8", "nov5", "dec3", "jan7", "sep30", "nov4", "dec2", "feb3"],
+      meetings: ["apr15", "jul9", "oct8", "nov5", "dec3", "jan7", "sep30", "nov4", "dec2", "feb3", "may12"],
       speakers: ["dovi-shefler", "tzuri-dotan", "avi-hadida"],
       detail: {
         he: "כל תב\"ר שנדון ב-14 הישיבות, לפי סדר כרונולוגי:<br><ul style='margin:8px 0 0 0;padding-right:18px;line-height:2;'><li><strong>תב\"ר 888</strong> — רכב לקב\"ט (פבר׳ 2025) — עלות לא פורטה — ברוב קולות (אביטל נגד)</li><li><strong>תב\"ר 903</strong> — טרקטורון כיבוי אש (פבר׳ 2025) — עלות לא פורטה — פה אחד</li><li><strong>תב\"ר שיקום דרכים</strong> — ₪11.26 מיליון (אפר׳ 2025) — פה אחד</li><li><strong>תב\"ר עיצוב חזית</strong> — עלות לא פורטה (אפר׳ 2025) — ברוב (7 בעד, 2 נמנעו)</li><li><strong>תב\"ר תנועת העזרא בתמר</strong> — ₪1,844,375 (יוני 2025) — פה אחד</li><li><strong>תב\"ר 927</strong> — מענק זהירות בדרכים ₪12,000 (ספט׳ 2025) — פה אחד</li><li><strong>תב\"ר 928</strong> — קייטנות חופש קיץ (ספט׳ 2025) — ברוב (אביטל נגד)</li><li><strong>תב\"ר 929</strong> — מערכות LPR לשערי היישוב (ספט׳ 2025) — פה אחד</li><li><strong>תב\"ר 924</strong> — הנגשת אמות המים העתיקות (נוב׳ 2025) — עלות לא פורטה — פה אחד</li><li><strong>תב\"ר 869</strong> — השמשת קומת המועצה בסנטר אפרת (נוב׳ 2025) — עלות לא פורטה — פה אחד</li><li><strong>תב\"ר 930</strong> — רכישת זכויות בבניין קומת המועצה (נוב׳ 2025) — עלות לא פורטה — פה אחד</li><li><strong>תב\"ר 840</strong> — שיקום כבישים ₪270,000 (דצמ׳ 2025) — צורי נמנע</li><li><strong>תב\"ר 873</strong> — חניון מול הבריכה ₪280,000 (דצמ׳ 2025) — פה אחד</li><li><strong>תב\"ר 919</strong> — שיקום צנרת ישן/חדש ₪2,400,000 (דצמ׳ 2025) — פה אחד</li><li><strong>תב\"ר 931</strong> — תוכניות מניעת התמכרויות ₪167,000 (דצמ׳ 2025) — פה אחד</li><li><strong>תב\"ר 572</strong> — מרכז ספורט ובריכה ₪39,100,000 (דצמ׳ 2025 + פבר׳ 2026) — פה אחד</li><li><strong>תב\"ר 809</strong> — פעולות למען קהילות ₪838,000 (דצמ׳ 2025) — פה אחד</li><li><strong>תב\"ר 932</strong> — מוגנות ₪120,000 (דצמ׳ 2025) — פה אחד</li><li><strong>מקדמת מפעל הפיס</strong> — ₪1,840,000 לצמצום גירעון (דצמ׳ 2025) — פה אחד</li><li><strong>תב\"ר 934</strong> — מצלמות ומרכיבים טכנולוגיים (פבר׳ 2026) — עלות לא פורטה — פה אחד</li><li><strong>תב\"ר 935</strong> — הצטיידות חינוך מיוחד ומתי\"א (פבר׳ 2026) — עלות לא פורטה — פה אחד</li><li><strong>תב\"ר 936</strong> — שיפור מוכנות לחירום (פבר׳ 2026) — עלות לא פורטה — פה אחד</li></ul>",
@@ -2846,7 +2915,7 @@ const COUNCIL_DATA = {
       he: "בחירת רב לאפרת",
       en: "Chief rabbi selection",
       summary: { he: "תהליך בחירת רב לאפרת. אסיפת הבחירה: 24 חברים (4 נציגי מועצה + 8 נציגי השר + 8 נציגי ציבור). 50 מועמדים נרשמו כנציגי ציבור.", en: "Process for selecting Efrat's chief rabbi. Selection assembly: 24 members (4 council reps + 8 ministerial + 8 public). 50 candidates registered as public reps." },
-      meetings: ["nov4"],
+      meetings: ["nov4", "may12"],
       speakers: ["dovi-shefler", "hanani-feigin"],
       detail: {
         he: "בנובמבר אישרה המועצה את 8 הנציגים שיציעו לשר הדתות. ראש המועצה ציין שש\"ס \"החל לדחוף את הסיפור הזה קדימה אחרי שהרדימו אותו בעבר\".",
@@ -2864,7 +2933,7 @@ const COUNCIL_DATA = {
       he: "אשראי וחוקי עזר",
       en: "Credit & by-laws",
       summary: { he: "חידוש מסגרת אשראי ₪5.5M, חוק עזר אגרת ביוב 2026, חוק עזר היטל שמירה 2026-2029. כולם אושרו פה אחד.", en: "₪5.5M credit facility renewal, 2026 sewage by-law, 2026-2029 watch-tax by-law. All approved unanimously." },
-      meetings: ["nov4", "dec2"],
+      meetings: ["nov4", "dec2", "may12"],
       speakers: ["dovi-shefler", "hanani-feigin", "avi-hadida", "shlomo-bentzvi"],
       detail: {
         he: "סעיפים תפעוליים: (1) מסגרת אשראי — בנק מזרחי בפריים מינוס 0.2%. (2) חוק העזר לאגרת ביוב — חברת \"מי שמש\" עומדת לקבל את הביוב במקום כפר עציון. (3) חוק עזר היטל שמירה — תעריף ₪13.18 למ\"ר עד 2029.",
