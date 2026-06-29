@@ -171,9 +171,9 @@ const COUNCIL_DATA = {
       note: { he: "חברת מועצה בשנת 2024. נכחה בישיבת 9.7.2024 והצביעה עם הרוב.", en: "Council member in 2024. Attended the July 9, 2024 meeting and voted with the majority." }
     },
     {
-      id: "efrat-gantz",
+      id: "efrat-gnatek",
       he: "אפרת גנטק",
-      en: "Efrat Gantz",
+      en: "Efrat Gnatek",
       role: { he: "חבר מועצה (לשעבר)", en: "Council Member (former)" },
       former: true,
       council_from: "2024-01-01", council_to: "2024-05-01",
@@ -2614,37 +2614,37 @@ const COUNCIL_DATA = {
       id: "va15_1", meeting: "apr15",
       title: { he: "אישור פרוטוקול ישיבת 4.12.2023", en: "Approval of the Dec 4, 2023 protocol" },
       result: { he: "פה אחד", en: "Unanimous" }, controversy: 1,
-      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gantz": "for", "hanoch-wolfe": "for" }
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gnatek": "for", "hanoch-wolfe": "for" }
     },
     {
       id: "va15_2", meeting: "apr15",
       title: { he: "אישור פרוטוקול ישיבת 1.1.2024", en: "Approval of the Jan 1, 2024 protocol" },
       result: { he: "פה אחד", en: "Unanimous" }, controversy: 1,
-      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gantz": "for", "hanoch-wolfe": "for" }
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gnatek": "for", "hanoch-wolfe": "for" }
     },
     {
       id: "va15_3", meeting: "apr15",
       title: { he: "אישור דובי שפלר כנציג לאשכול יו״ש", en: "Approve Dovi Shefler as rep to the J&S cluster" },
       result: { he: "פה אחד", en: "Unanimous" }, controversy: 1,
-      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gantz": "for", "hanoch-wolfe": "for" }
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gnatek": "for", "hanoch-wolfe": "for" }
     },
     {
       id: "va15_4", meeting: "apr15",
       title: { he: "אישור תאריכי ישיבות מועצה 2024", en: "Approve the 2024 council-meeting schedule" },
       result: { he: "פה אחד", en: "Unanimous" }, controversy: 1,
-      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gantz": "for", "hanoch-wolfe": "for" }
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gnatek": "for", "hanoch-wolfe": "for" }
     },
     {
       id: "va15_5", meeting: "apr15",
       title: { he: "חוקי עזר — אגרה והיטל ביוב", en: "By-laws — sewage fee and levy" },
       result: { he: "פה אחד", en: "Unanimous" }, controversy: 1,
-      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gantz": "for", "hanoch-wolfe": "for" }
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gnatek": "for", "hanoch-wolfe": "for" }
     },
     {
       id: "va15_6", meeting: "apr15",
       title: { he: "תב״רים", en: "Capital budgets (TaBaRs)" },
       result: { he: "פה אחד", en: "Unanimous" }, controversy: 1,
-      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gantz": "for", "hanoch-wolfe": "for" }
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gnatek": "for", "hanoch-wolfe": "for" }
     }
   ],
 
