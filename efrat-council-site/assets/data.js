@@ -204,7 +204,7 @@ const COUNCIL_DATA = {
       attendance: { dec3: false, dec23: false, jan7: false, feb4: false, apr8: false, may6: false, jun10: false, jul22: false, sep9: false, sep30: false, nov4: false, dec2: false, jan6: false, feb3: false, jun30: false, jul9: false, oct8: false, nov5: false, jun3: false, jun25app: false, jun25arn: false, jun25bud: false, mar31: false, apr15: false, sep26: false, jan6b: false, apr14: false, may12: false },
       speaker_turns: { dec3: 0, dec23: 0, jan7: 0, feb4: 0, apr8: 0, may6: 0, jun10: 0, jul22: 0, sep9: 0, sep30: 0, nov4: 0, dec2: 0, jan6: 0, feb3: 0, jun30: 0, jul9: 0, oct8: 0, nov5: 0, jun3: 0, jun25app: 0, jun25arn: 0, jun25bud: 0, mar31: 0, apr15: 0, sep26: 0, jan6b: 0, apr14: 0, may12: 0 },
       vote_alignment_with_mayor: null,
-      note: { he: "חבר מועצה במליאה שהושבעה במרץ 2024. נעדר משתי הישיבות שתועדו בתקופתו (31.3 ו-15.4.2024); אינו מופיע מיוני 2024 ואילך.", en: "A member of the council sworn in in March 2024. Was absent from both recorded meetings during his tenure (March 31 and April 15, 2024); does not appear from June 2024 onward." }
+      note: { he: "חבר מועצה ותיק (יו\"ר ועדת הביטחון, כ-6 שנים) וסמנכ\"ל בארגון נפש בנפש. נכלל ברשימת חברי המועצה בישיבת הכינון (31.3.2024) ובאפריל 2024, אך נעדר משתיהן. עזב את המועצה במהלך 2024 וקיבל פרידה רשמית (באיחור) בישיבת 8.4.2025.", en: "A veteran council member (chair of the security committee, ~6 years) and a deputy CEO of Nefesh B\u2019Nefesh. Listed among the council members at the March 31, 2024 inaugural and in April 2024, but absent from both. He left the council during 2024 and received a (belated) formal farewell at the April 8, 2025 meeting." }
     }
   ],
 
