@@ -214,7 +214,7 @@ const COUNCIL_DATA = {
       date: "2024-12-03",
       hebrew_date: "ב' בכסלו תשפ\"ה",
       title: { he: "ישיבת מועצה מן המניין", en: "Regular Council Meeting" },
-      attendance_count: 9,
+      attendance_count: 8,
       absent: ["Avi Hadida", "Yishai Fleisher", "Shlomo Ben Tzvi"],
       total_speaker_turns: 210,
       agenda: [
@@ -1326,9 +1326,9 @@ const COUNCIL_DATA = {
       id: "vmr4e",
       meeting: "mar4",
       title: { he: "תב\"ר 920 — מרכז אומנות", en: "TaBaR 920 — art center" },
-      result: { he: "עבר; חנני פייגין נמנע", en: "Passed; Hanani Feigin abstained" },
-      controversy: 1,
-      positions: { "dovi-shefler": "for", "tzuri-dotan": "absent", "hanani-feigin": "abstain", "avi-hadida": "for", "dana-spiegel": "for", "menachem-spitz": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "talia-marcus": "for" }
+      result: { he: "עבר; אבי חדידה נגד, חנני פייגין נמנע", en: "Passed; Avi Hadida against, Hanani Feigin abstained" },
+      controversy: 2,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "absent", "hanani-feigin": "abstain", "avi-hadida": "against", "dana-spiegel": "for", "menachem-spitz": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "talia-marcus": "for" }
     },
     {
       id: "vmr4f",
@@ -2930,8 +2930,8 @@ const COUNCIL_DATA = {
     {
       id: "vj9_7", meeting: "jul9",
       title: { he: "אישור פרוטוקול 3.6.2024", en: "Approval of the June 3, 2024 protocol" },
-      result: { he: "עבר; אבי חדידה נמנע", en: "Passed; Avi Hadida abstained" }, controversy: 2,
-      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "abstain", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for" }
+      result: { he: "עבר; אבי חדידה לא השתתף (נעדר מישיבת 3.6)", en: "Passed; Avi Hadida not voting (was absent from the June 3 meeting)" }, controversy: 1,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "not_voting", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for" }
     },
     {
       id: "vj9_8", meeting: "jul9",
@@ -3016,8 +3016,8 @@ const COUNCIL_DATA = {
     {
       id: "vn5_1", meeting: "nov5",
       title: { he: "אישור פרוטוקול ישיבת 8.10.2024", en: "Approval of the Oct 8, 2024 protocol" },
-      result: { he: "עבר; אבי חדידה נמנע", en: "Passed; Avi Hadida abstained" }, controversy: 2,
-      positions: { "dovi-shefler": "for", "hanani-feigin": "for", "avi-hadida": "abstain", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "talia-marcus": "for" }
+      result: { he: "עבר; אבי חדידה לא השתתף (נעדר מישיבת 8.10)", en: "Passed; Avi Hadida not voting (was absent from the Oct 8 meeting)" }, controversy: 1,
+      positions: { "dovi-shefler": "for", "hanani-feigin": "for", "avi-hadida": "not_voting", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "talia-marcus": "for" }
     },
     {
       id: "vn5_2", meeting: "nov5",
@@ -3146,6 +3146,156 @@ const COUNCIL_DATA = {
       title: { he: "תב״רים", en: "Capital budgets (TaBaRs)" },
       result: { he: "פה אחד", en: "Unanimous" }, controversy: 1,
       positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "avi-hadida": "for", "avital-cohen": "for", "ariella-perry": "for", "yishai-fleisher": "for", "shlomo-bentzvi": "for", "oded-ravivi": "for", "tamar-amar": "for", "menachem-spitz": "for", "efrat-gnatek": "for", "hanoch-wolfe": "for" }
+    },
+
+    /* ===== Dec 3, 2024 meeting ===== */
+    {
+      id: "vd3_1", meeting: "dec3",
+      title: { he: "מינוי יו\"רים וחברי הוועדות", en: "Appointment of committee chairs and members" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "for", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+    {
+      id: "vd3_2", meeting: "dec3",
+      title: { he: "אישור הרכב ועדת ההנהלה", en: "Approval of the executive committee composition" },
+      result: { he: "עבר ברוב קולות; נגד: אביטל כהן", en: "Passed by majority; against: Avital Cohen" }, controversy: 1,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "against", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+    {
+      id: "vd3_3", meeting: "dec3",
+      title: { he: "מינוי חברי המועצה הדתית", en: "Appointment of Religious Council members" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "for", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+    {
+      id: "vd3_4", meeting: "dec3",
+      title: { he: "מינוי חברי ועדת החינוך", en: "Appointment of education committee members" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "for", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+    {
+      id: "vd3_5", meeting: "dec3",
+      title: { he: "אישור פרוטוקול ישיבת המליאה 15.04.2024", en: "Approval of the 15-04-24 plenum protocol" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "for", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+    {
+      id: "vd3_6", meeting: "dec3",
+      title: { he: "אישור פרוטוקול ישיבת המליאה 05.11.2024", en: "Approval of the 05-11-24 plenum protocol" },
+      result: { he: "עבר ברוב קולות; נגד: חנני פייגין, צורי דותן, אביטל כהן", en: "Passed by majority; against: Hanani Feigin, Tzuri Dotan, Avital Cohen" }, controversy: 2,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "against", "hanani-feigin": "against", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "against", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+    {
+      id: "vd3_7", meeting: "dec3",
+      title: { he: "הארכת תוקף חוקי עזר אגרת ביוב והיטל ביוב עד 30.06.2025", en: "Extension of sewage fee & levy by-laws to 30-06-25" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "for", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+    {
+      id: "vd3_8", meeting: "dec3",
+      title: { he: "החלפת מורשה חתימה — בית ספר חטיבה צעירה", en: "Change of signatory — young-division school" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "for", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+    {
+      id: "vd3_9", meeting: "dec3",
+      title: { he: "תב\"ר 909 — שיקום חמ\"לי צח\"ש אפרת", en: "TaBaR 909 — Efrat emergency-squad command-post renewal" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "for", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+    {
+      id: "vd3_10", meeting: "dec3",
+      title: { he: "תב\"ר 910 — פיתוח יחידות צעירים", en: "TaBaR 910 — young-adult units development" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "for", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+    {
+      id: "vd3_11", meeting: "dec3",
+      title: { he: "אישור נתן ירון כחבר ועדת התנועה", en: "Approve Natan Yaron as traffic-committee member" },
+      result: { he: "עבר ברוב קולות; נגד: צורי דותן", en: "Passed by majority; against: Tzuri Dotan" }, controversy: 1,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "against", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "for", "avi-hadida": "absent", "shlomo-bentzvi": "absent", "yishai-fleisher": "absent" }
+    },
+
+    /* ===== Dec 23, 2024 special budget meeting ===== */
+    {
+      id: "vd23_1", meeting: "dec23",
+      title: { he: "אישור תקציב המועצה לשנת 2025 — 138.66 מיליון ש\"ח (תקן 233.45 משרות)", en: "Approval of the 2025 budget — ₪138.66M (233.45 staff positions)" },
+      result: { he: "עבר (8 בעד, 2 נגד); נגד: אבי חדידה ושלמה בן צבי; ישי פליישר (בזום) לא השתתף בהצבעה", en: "Passed (8 for, 2 against); against: Avi Hadida and Shlomo Ben Tzvi; Yishai Fleisher (on Zoom) did not vote" }, controversy: 3,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "hanani-feigin": "for", "ariella-perry": "for", "talia-marcus": "for", "menachem-spitz": "for", "dana-spiegel": "for", "avital-cohen": "for", "avi-hadida": "against", "shlomo-bentzvi": "against", "yishai-fleisher": "not_voting" }
+    },
+
+    /* ===== Jan 7, 2025 meeting ===== */
+    {
+      id: "vj7_1", meeting: "jan7",
+      title: { he: "אישור פרוטוקול ישיבת מליאה 3.12", en: "Approval of the 03-12-24 plenum protocol" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "for", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_2", meeting: "jan7",
+      title: { he: "המשך העסקת מנהל אגף החינוך עד אוגוסט 2025", en: "Continued employment of the education-department head to Aug 2025" },
+      result: { he: "עבר ברוב קולות; נגד: אביטל כהן", en: "Passed by majority; against: Avital Cohen" }, controversy: 1,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "against", "yishai-fleisher": "for", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_3", meeting: "jan7",
+      title: { he: "צירוף דנה שפיגל לוועדת מכרזים", en: "Adding Dana Spiegel to the tenders committee" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "for", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_4", meeting: "jan7",
+      title: { he: "מינוי חברים לוועדת כספים", en: "Appointment of finance-committee members" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "for", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_5", meeting: "jan7",
+      title: { he: "דחיית ישיבת המועצה של אפריל מ-1.4 ל-8.4", en: "Moving the April council meeting from Apr 1 to Apr 8" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "for", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_6", meeting: "jan7",
+      title: { he: "תב\"ר 911 — תוכנית המראה ארגונית (250 אלף ש\"ח, משרד הפנים)", en: "TaBaR 911 — organizational take-off program (₪250K, Interior Ministry)" },
+      result: { he: "פה אחד; ישי פליישר עזב לפני ההצבעות", en: "Unanimous; Yishai Fleisher left before the votes" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "not_voting", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_7", meeting: "jan7",
+      title: { he: "תב\"ר 912", en: "TaBaR 912" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "not_voting", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_8", meeting: "jan7",
+      title: { he: "תב\"ר 913", en: "TaBaR 913" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "not_voting", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_9", meeting: "jan7",
+      title: { he: "תב\"ר 914", en: "TaBaR 914" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "not_voting", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_10", meeting: "jan7",
+      title: { he: "תב\"ר 915 — מערכת מצלמות למורדות התאנה", en: "TaBaR 915 — camera system for Mordot HaTe'ena" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "not_voting", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_11", meeting: "jan7",
+      title: { he: "תב\"ר 916", en: "TaBaR 916" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "not_voting", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
+    },
+    {
+      id: "vj7_12", meeting: "jan7",
+      title: { he: "תב\"ר 917 — שיפור מוכנות לחירום (71 אלף ש\"ח, משרד הפנים)", en: "TaBaR 917 — emergency-readiness upgrade (₪71K, Interior Ministry)" },
+      result: { he: "פה אחד", en: "Unanimous" }, controversy: 0,
+      positions: { "dovi-shefler": "for", "tzuri-dotan": "for", "dana-spiegel": "for", "avital-cohen": "for", "yishai-fleisher": "not_voting", "talia-marcus": "for", "menachem-spitz": "for", "ariella-perry": "for", "hanani-feigin": "absent", "avi-hadida": "absent", "shlomo-bentzvi": "absent" }
     }
   ],
 

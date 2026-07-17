@@ -33,7 +33,7 @@
 
   // Expose helpers globally
   window.EfratSite = {
-    fmtDate(iso) { if (!iso) return ''; var p = String(iso).split('-'); return p.length === 3 ? p[2] + '/' + p[1] + '/' + p[0].slice(2) : iso; },
+    fmtDate(iso) { if (!iso) return ''; var p = String(iso).split('-'); return p.length === 3 ? p[2] + '-' + p[1] + '-' + p[0].slice(2) : iso; },
     initials(name) {
       return name.split(/\s+/).map(n => n[0]).slice(0, 2).join('').toUpperCase();
     },

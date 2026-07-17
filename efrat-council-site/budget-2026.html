@@ -19,6 +19,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>מידע על תקציב 2026 · Harei Efrat — 2026 Budget Information</title>
+<meta name="description" content="Breakdown of the Efrat 2026 municipal budget (₪144.26M).">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Harei Efrat — הרי אפרת">
+<meta property="og:title" content="Harei Efrat — הרי אפרת">
+<meta property="og:description" content="Breakdown of the Efrat 2026 municipal budget (₪144.26M).">
+<meta property="og:url" content="https://www.hareiefrat.com/budget-2026.html">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/style.css">
 
 <script type="application/ld+json">
@@ -70,8 +77,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span data-lang="he">האתר של אפרת להבין מה קורה במועצה ובנדל"ן</span>
           <span data-lang="en">Efrat's site to understand what is going on in the council and in real estate</span>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
     <nav class="primary">
       <a href="index.html"><span class="inline-toggle-lang"><span data-lang="he">בית</span><span data-lang="en">Home</span></span></a>
       <a href="members.html"><span class="inline-toggle-lang"><span data-lang="he">חברי המועצה</span><span data-lang="en">Members</span></span></a>
@@ -162,6 +169,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <div class="chart-card">
+    <div class="chart-title"><span class="inline-toggle-lang"><span data-lang="he">תקציב מאושר לפי שנה (מיליוני ש"ח)</span><span data-lang="en">Approved budget by year (₪ millions)</span></span></div>
+    <div style="position:relative;height:240px;width:100%;"><canvas id="trend-chart"></canvas></div>
+  </div>
+
   <!-- POPULATION -->
   <h2 class="section-title toggle-lang"><span data-lang="he">אוכלוסייה ודמוגרפיה</span><span data-lang="en">Population &amp; demographics</span></h2>
 
@@ -173,6 +185,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p><strong>14,039 residents</strong>, up from 13,517 in 2024 — a notable jump. The five-year line: 13,297 (2021) → 13,448 → 13,462 → 13,517 → 14,039 (2025). Age mix: <strong>41% are 0–17</strong>, 28% are 18–40, 21% are 41–64. Housing: 2,709 occupied units, concentrated in Zayit (903 units, 34%), Dekel (492, 18%), Dagan (388, 14%), Tamar (362, 13%), then Rimon, Gefen and Te'ena.</p>
     </div>
   </section>
+
+  <div class="chart-row">
+    <div class="chart-card" style="flex:1.4;">
+      <div class="chart-title"><span class="inline-toggle-lang"><span data-lang="he">אוכלוסיית אפרת 2021–2025</span><span data-lang="en">Efrat population 2021–2025</span></span></div>
+      <div style="position:relative;height:230px;width:100%;"><canvas id="pop-line-chart"></canvas></div>
+    </div>
+    <div class="chart-card" style="flex:1;">
+      <div class="chart-title"><span class="inline-toggle-lang"><span data-lang="he">תמהיל גילאים</span><span data-lang="en">Age mix</span></span></div>
+      <div style="position:relative;height:230px;width:100%;"><canvas id="age-chart"></canvas></div>
+    </div>
+    <div class="chart-card" style="flex:1;">
+      <div class="chart-title"><span class="inline-toggle-lang"><span data-lang="he">יח"ד מאוכלסות לפי שכונה</span><span data-lang="en">Occupied units by neighborhood</span></span></div>
+      <div style="position:relative;height:230px;width:100%;"><canvas id="housing-chart"></canvas></div>
+    </div>
+  </div>
 
   <!-- WHERE THE MONEY GOES -->
   <h2 class="section-title toggle-lang"><span data-lang="he">לאן הכסף הולך</span><span data-lang="en">Where the money goes</span></h2>
@@ -224,6 +251,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <div class="chart-card">
+    <div class="chart-title"><span class="inline-toggle-lang"><span data-lang="he">הוצאה מול הכנסה עצמית לפי אגף (מיליוני ש"ח)</span><span data-lang="en">Expense vs. self-generated income by department (₪ millions)</span></span></div>
+    <div style="position:relative;height:420px;width:100%;"><canvas id="dept-chart"></canvas></div>
+  </div>
+
   <!-- STRATEGIC PRIORITIES -->
   <h2 class="section-title toggle-lang"><span data-lang="he">סדרי עדיפויות אסטרטגיים</span><span data-lang="en">Strategic priorities</span></h2>
 
@@ -262,6 +294,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
+  <!-- AUDITED FINANCIALS HISTORY (Ministry of Interior open data) -->
+  <h2 class="section-title toggle-lang" style="margin-top:36px;">
+    <span data-lang="he">במבט לאחור: הדוחות הכספיים המבוקרים 2016–2021</span>
+    <span data-lang="en">Looking back: audited financial reports 2016–2021</span>
+  </h2>
+  <p class="toggle-lang" style="color:var(--muted);font-size:0.92rem;margin-bottom:14px;">
+    <span data-lang="he">נתונים רשמיים מהדוחות הכספיים המבוקרים שהגישה המועצה למשרד הפנים, כפי שפורסמו במאגר הנתונים הממשלתי הפתוח. הסכומים באלפי ש"ח.</span>
+    <span data-lang="en">Official figures from the audited financial reports Efrat filed with the Ministry of Interior, as published on Israel's open-data portal. Amounts in ₪ thousands.</span>
+  </p>
+  <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px;box-shadow:var(--shadow);">
+    <div style="position:relative;height:320px;width:100%;">
+      <canvas id="audited-chart"></canvas>
+    </div>
+  </div>
+  <table class="votes" style="margin-top:16px;font-size:0.88rem;">
+    <tr>
+      <th style="text-align:start;"><span class="inline-toggle-lang"><span data-lang="he">שנה</span><span data-lang="en">Year</span></span></th>
+      <th><span class="inline-toggle-lang"><span data-lang="he">הכנסות תקציב רגיל</span><span data-lang="en">Regular-budget revenue</span></span></th>
+      <th><span class="inline-toggle-lang"><span data-lang="he">הוצאות תקציב רגיל</span><span data-lang="en">Regular-budget expenditure</span></span></th>
+      <th><span class="inline-toggle-lang"><span data-lang="he">עודף (גירעון) שנתי בתקציב הרגיל</span><span data-lang="en">Annual regular-budget surplus (deficit)</span></span></th>
+      <th><span class="inline-toggle-lang"><span data-lang="he">תוצאה כוללת לשנה (כולל תב"רים)</span><span data-lang="en">Overall annual result (incl. capital)</span></span></th>
+    </tr>
+    <tbody id="audited-table"></tbody>
+  </table>
+  <p style="font-size:0.78rem;color:var(--muted);margin:10px 0 0;">
+    <span class="inline-toggle-lang">
+      <span data-lang="he">מקור: <a href="https://data.gov.il/dataset/local-council-1" target="_blank" rel="noopener">דוחות כספיים מבוקרים — מועצות מקומיות, משרד הפנים (data.gov.il)</a>. אפרת מופיעה במאגר בשם "אפרתה" (קוד רשות 2928). נכון לעכשיו המאגר מעודכן עד דוח 2021.</span>
+      <span data-lang="en">Source: <a href="https://data.gov.il/dataset/local-council-1" target="_blank" rel="noopener">Audited financial reports — local councils, Ministry of Interior (data.gov.il)</a>. Efrat appears in the registry as "Efrata" (authority code 2928). The registry currently runs through the 2021 report.</span>
+    </span>
+  </p>
+
   <!-- CAVEATS -->
   <div class="callout toggle-lang" style="margin-top:28px;">
     <div data-lang="he"><strong>חשוב לדעת:</strong> חלק ניכר מהמשימות מסומן במפורש כ"מותנה בגיוס תקציב", ורבות נשענות על תב"רים או על "השקעת הון אנושי" ולא על מזומן. זוהי תוכנית — חלקה שאפתני. כל הנתונים לקוחים מתוכנית העבודה הרשמית המקושרת לתקציב 2026.</div>
@@ -272,17 +335,170 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer class="site">
   <div class="inner toggle-lang">
-    <div data-lang="he">מבוסס על תוכנית העבודה והתקציב הרשמיים של מועצת אפרת לשנת 2026.<br><a href="https://www.efrat.muni.il/he/protocols/?year=0&category=6&order=date-desc" target="_blank" rel="noopener" style="color:var(--accent);">לפרוטוקול של כל ישיבת מועצה לחצו כאן</a>.</div>
-    <div data-lang="en">Based on Efrat Council's official 2026 work plan and budget.<br><a href="https://www.efrat.muni.il/he/protocols/?year=0&category=6&order=date-desc" target="_blank" rel="noopener" style="color:var(--accent);">For a protocol of every council meeting click here</a>.</div>
+    <div data-lang="he">מבוסס על תוכנית העבודה והתקציב הרשמיים של מועצת אפרת לשנת 2026.<br><a href="https://www.efrat.muni.il/he/protocols/?year=0&amp;category=6&amp;order=date-desc" target="_blank" rel="noopener" style="color:var(--accent);">לפרוטוקול של כל ישיבת מועצה לחצו כאן</a>.</div>
+    <div data-lang="en">Based on Efrat Council's official 2026 work plan and budget.<br><a href="https://www.efrat.muni.il/he/protocols/?year=0&amp;category=6&amp;order=date-desc" target="_blank" rel="noopener" style="color:var(--accent);">For a protocol of every council meeting click here</a>.</div>
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="assets/app.js"></script>
 <script>
 (function() {
-  var saved = (function(){ try { return localStorage.getItem('efrat-lang') || 'he'; } catch(e){ return 'he'; }})();
+  // Audited financial reports filed with the Ministry of Interior (₪ thousands).
+  // Source: data.gov.il/dataset/local-council-1 — שם_רשות "אפרתה", קוד_רשות 2928, גיליון "טופס 4".
+  var AUDITED = [
+    { year: 2016, income: 73896,  expense: 81458,  regResult: -2258, overall: 2795  },
+    { year: 2017, income: 81573,  expense: 85994,  regResult: 433,   overall: 16349 },
+    { year: 2018, income: 89719,  expense: 93529,  regResult: 563,   overall: -5754 },
+    { year: 2019, income: 95156,  expense: 100969, regResult: -417,  overall: -8313 },
+    { year: 2020, income: 106292, expense: 105669, regResult: 278,   overall: 16625 },
+    { year: 2021, income: 112654, expense: 111880, regResult: 785,   overall: -8779 }
+  ];
+  var lang = (function(){ try { return localStorage.getItem('efrat-lang') || 'he'; } catch(e){ return 'he'; }})();
+  var fmt = function(n) { return n.toLocaleString('en-US'); };
+
+  var tbody = document.getElementById('audited-table');
+  tbody.innerHTML = AUDITED.slice().reverse().map(function(r) {
+    var neg = 'color:var(--opposition);font-weight:600;', pos = 'color:var(--ok);font-weight:600;';
+    return '<tr><td class="title">' + r.year + '</td><td>' + fmt(r.income) + '</td><td>' + fmt(r.expense) + '</td>' +
+      '<td style="' + (r.regResult < 0 ? neg : pos) + '">' + fmt(r.regResult) + '</td>' +
+      '<td style="' + (r.overall < 0 ? neg : pos) + '">' + fmt(r.overall) + '</td></tr>';
+  }).join('');
+
+  // ---- Colorful charts (rebuilt on language toggle) ----
+  var PALETTE = ['#1f6d8c', '#b18a3a', '#2c7a4b', '#b03a3a', '#f5c842', '#5b6f87', '#7a6235', '#c76f9d', '#6b4fa3', '#3aa6b0'];
+  var charts = [];
+  function T(he, en) { return lang === 'he' ? he : en; }
+
+  function buildCharts() {
+    charts.forEach(function(c) { c.destroy(); });
+    charts = [];
+    var rtl = lang === 'he';
+    Chart.defaults.font.family = getComputedStyle(document.body).fontFamily;
+
+    // 1. Approved budget by year
+    charts.push(new Chart(document.getElementById('trend-chart'), {
+      type: 'bar',
+      data: {
+        labels: ['2024', '2025', '2026'],
+        datasets: [{
+          data: [131.08, 138.66, 144.26],
+          backgroundColor: ['#5b9bb5', '#2c7a4b', '#b18a3a'],
+          borderRadius: 8
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { rtl: rtl, callbacks: { label: function(c){ return '₪' + c.parsed.y + 'M'; } } } },
+        scales: { y: { min: 100, ticks: { callback: function(v){ return '₪' + v + 'M'; } } } }
+      }
+    }));
+
+    // 2. Department expense vs income (horizontal)
+    var DEPTS = [
+      { he: 'חינוך',                en: 'Education',            exp: 51.5, inc: 41.0 },
+      { he: 'שפ"ע',                 en: 'City upkeep (Shefa)',  exp: 24.7, inc: 13.2 },
+      { he: 'שירותים חברתיים',      en: 'Social services',      exp: 20.5, inc: 14.6 },
+      { he: 'הנהלה ושירותים שונים', en: 'Management & misc',    exp: 20.1, inc: 0.5 },
+      { he: 'ביטחון וחירום',        en: 'Security & emergency', exp: 11.7, inc: 10.2 },
+      { he: 'שונות / מימון',        en: 'Misc / financing',     exp: 8.5,  inc: 5.1 },
+      { he: 'הנדסה',                en: 'Engineering',          exp: 2.8,  inc: 2.1 },
+      { he: 'מטה נוער וצעירים',     en: 'Youth & young adults', exp: 2.4,  inc: 0.8 },
+      { he: 'תרבות',                en: 'Culture',              exp: 1.0,  inc: 0.1 },
+      { he: 'מועצה דתית',           en: 'Religious council',    exp: 1.0,  inc: 0 }
+    ];
+    charts.push(new Chart(document.getElementById('dept-chart'), {
+      type: 'bar',
+      data: {
+        labels: DEPTS.map(function(d){ return T(d.he, d.en); }),
+        datasets: [
+          { label: T('הוצאה', 'Expense'), data: DEPTS.map(function(d){ return d.exp; }), backgroundColor: '#b03a3a', borderRadius: 4 },
+          { label: T('הכנסה עצמית', 'Self-generated income'), data: DEPTS.map(function(d){ return d.inc; }), backgroundColor: '#2c7a4b', borderRadius: 4 }
+        ]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { position: 'bottom', rtl: rtl }, tooltip: { rtl: rtl, callbacks: { label: function(c){ return c.dataset.label + ': ₪' + c.parsed.x + 'M'; } } } },
+        scales: { x: { ticks: { callback: function(v){ return '₪' + v + 'M'; } } }, y: { ticks: { autoSkip: false } } }
+      }
+    }));
+
+    // 3. Population 2021–2025
+    charts.push(new Chart(document.getElementById('pop-line-chart'), {
+      type: 'line',
+      data: {
+        labels: ['2021', '2022', '2023', '2024', '2025'],
+        datasets: [{
+          data: [13297, 13448, 13462, 13517, 14039],
+          borderColor: '#1f6d8c',
+          backgroundColor: 'rgba(31,109,140,0.15)',
+          fill: true, tension: 0.3,
+          pointBackgroundColor: '#b18a3a', pointRadius: 5
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { rtl: rtl } },
+        scales: { y: { ticks: { callback: function(v){ return v.toLocaleString('en-US'); } } } }
+      }
+    }));
+
+    // 4. Age mix doughnut
+    charts.push(new Chart(document.getElementById('age-chart'), {
+      type: 'doughnut',
+      data: {
+        labels: [T('0–17', '0–17'), T('18–40', '18–40'), T('41–64', '41–64'), T('65+', '65+')],
+        datasets: [{ data: [41, 28, 21, 10], backgroundColor: ['#1f6d8c', '#2c7a4b', '#b18a3a', '#b03a3a'], borderWidth: 2, borderColor: '#fff' }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, cutout: '55%',
+        plugins: { legend: { position: 'bottom', rtl: rtl }, tooltip: { rtl: rtl, callbacks: { label: function(c){ return c.label + ': ' + c.parsed + '%'; } } } }
+      }
+    }));
+
+    // 5. Housing by neighborhood doughnut (2,709 total; smaller neighborhoods grouped)
+    charts.push(new Chart(document.getElementById('housing-chart'), {
+      type: 'doughnut',
+      data: {
+        labels: [T('זית', 'Zayit'), T('דקל', 'Dekel'), T('דגן', 'Dagan'), T('תמר', 'Tamar'), T('רימון, גפן, תאנה ואחרות', 'Rimon, Gefen, Te\'ena & others')],
+        datasets: [{ data: [903, 492, 388, 362, 564], backgroundColor: ['#1f6d8c', '#b18a3a', '#2c7a4b', '#f5c842', '#5b6f87'], borderWidth: 2, borderColor: '#fff' }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, cutout: '55%',
+        plugins: { legend: { position: 'bottom', rtl: rtl }, tooltip: { rtl: rtl } }
+      }
+    }));
+
+    // 6. Audited financials 2016–2021 (Ministry of Interior data)
+    charts.push(new Chart(document.getElementById('audited-chart'), {
+      type: 'bar',
+      data: {
+        labels: AUDITED.map(function(r){ return r.year; }),
+        datasets: [
+          { label: T('הכנסות תקציב רגיל', 'Regular-budget revenue'),  data: AUDITED.map(function(r){ return r.income; }),  backgroundColor: '#1f6d8c', borderRadius: 4 },
+          { label: T('הוצאות תקציב רגיל', 'Regular-budget expenditure'), data: AUDITED.map(function(r){ return r.expense; }), backgroundColor: '#b18a3a', borderRadius: 4 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { position: 'bottom', rtl: rtl }, tooltip: { rtl: rtl } },
+        scales: { y: { ticks: { callback: function(v){ return (v/1000) + 'M'; } } } }
+      }
+    }));
+  }
+
+  buildCharts();
+
+  // Rebuild charts with translated labels when the language is toggled
+  document.querySelectorAll('.lang-toggle button').forEach(function(b) {
+    b.addEventListener('click', function() {
+      lang = b.dataset.lang;
+      buildCharts();
+    });
+  });
+
   document.querySelectorAll('.toggle-lang, .inline-toggle-lang').forEach(function(el) {
-    el.classList.add(saved);
+    el.classList.add(lang);
   });
 })();
 </script>

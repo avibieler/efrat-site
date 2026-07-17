@@ -319,6 +319,84 @@ footer.site .inner {
   table.votes th, table.votes td { padding: 6px 4px; }
 }
 
+/* Chart cards (budget page and elsewhere) */
+.chart-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  margin: 18px 0 28px;
+}
+.chart-card .chart-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+.chart-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 18px 0 28px;
+}
+.chart-row .chart-card { margin: 0; min-width: 260px; }
+
+/* Home: election countdown */
+.election-countdown {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f3e8 100%);
+  border: 1px solid var(--line);
+  border-inline-start: 5px solid var(--accent);
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.election-countdown .ec-num {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: Georgia, "Frank Ruhl Libre", serif;
+  color: var(--accent);
+  line-height: 1;
+}
+.election-countdown .ec-label { font-size: 0.95rem; color: var(--ink); }
+.election-countdown .ec-note { font-size: 0.8rem; color: var(--muted); }
+
+/* Home: latest meeting strip */
+.latest-strip {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-inline-start: 5px solid var(--mayor);
+  border-radius: 10px;
+  padding: 13px 20px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  text-decoration: none;
+  transition: box-shadow .15s ease;
+}
+.latest-strip:hover { text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.latest-strip .ls-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mayor);
+  white-space: nowrap;
+}
+.latest-strip .ls-title { font-weight: 700; font-size: 1rem; }
+.latest-strip .ls-meta { font-size: 0.85rem; color: var(--muted); }
+.latest-strip .ls-cta { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin-inline-start: auto; white-space: nowrap; }
+.latest-strip:hover .ls-cta { text-decoration: underline; }
+
 /* Newspaper-style homepage grid */
 .front-page {
   display: grid;
@@ -371,7 +449,7 @@ footer.site .inner {
 [lang="he"] .eyebrow { letter-spacing: 0.03em; }
 
 .headline {
-  font-family: Georgia, "Heebo", "Noto Serif Hebrew", serif;
+  font-family: Georgia, "Frank Ruhl Libre", "Noto Serif Hebrew", serif;
   font-weight: 700;
   line-height: 1.12;
   color: var(--ink);

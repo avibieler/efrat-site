@@ -1,0 +1,15 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hillGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b18a3a"/>
+      <stop offset="100%" stop-color="#7a6235"/>
+    </linearGradient>
+    <linearGradient id="hillGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f6d8c"/>
+      <stop offset="100%" stop-color="#155267"/>
+    </linearGradient>
+  </defs>
+  <circle cx="46" cy="20" r="7" fill="#f5c842"/>
+  <path d="M0 50 L14 32 L24 42 L34 26 L46 40 L56 30 L64 38 L64 64 L0 64 Z" fill="url(#hillGrad)"/>
+  <path d="M0 56 L10 44 L20 50 L30 40 L42 52 L54 44 L64 50 L64 64 L0 64 Z" fill="url(#hillGrad2)" opacity="0.85"/>
+</svg>

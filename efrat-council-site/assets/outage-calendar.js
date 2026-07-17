@@ -92,13 +92,13 @@
           if (ev.water && ev.power) cls += ' cal-both';
           else if (ev.water) cls += ' cal-water';
           else if (ev.power) cls += ' cal-power';
-          const dateStr = dt.toLocaleDateString(lang === 'he' ? 'he-IL' : 'en-GB');
+          const dateStr = String(dt.getDate()).padStart(2, '0') + '-' + String(dt.getMonth() + 1).padStart(2, '0') + '-' + String(dt.getFullYear()).slice(2);
           const types = [];
           if (ev.water) types.push(lang === 'he' ? 'מים' : 'water');
           if (ev.power) types.push(lang === 'he' ? 'חשמל' : 'power');
           title = dateStr + ' — ' + types.join(' + ') + '\n\n' + ev.events.map(e => lang === 'he' ? e.note_he : e.note_en).join('\n');
         } else {
-          const dateStr = dt.toLocaleDateString(lang === 'he' ? 'he-IL' : 'en-GB');
+          const dateStr = String(dt.getDate()).padStart(2, '0') + '-' + String(dt.getMonth() + 1).padStart(2, '0') + '-' + String(dt.getFullYear()).slice(2);
           title = dateStr;
         }
         html += `<div class="${cls}" title="${title.replace(/"/g, '&quot;')}" data-date="${key}"></div>`;

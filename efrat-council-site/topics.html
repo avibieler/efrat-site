@@ -19,6 +19,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>הרי אפרת · Harei Efrat — מועצת אפרת</title>
+<meta name="description" content="Key topics discussed in the Efrat council, tracked across meetings.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Harei Efrat — הרי אפרת">
+<meta property="og:title" content="Harei Efrat — הרי אפרת">
+<meta property="og:description" content="Key topics discussed in the Efrat council, tracked across meetings.">
+<meta property="og:url" content="https://www.hareiefrat.com/topics.html">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/style.css">
 
 <script type="application/ld+json">
@@ -70,8 +77,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span data-lang="he">האתר של אפרת להבין מה קורה במועצה ובנדל"ן</span>
           <span data-lang="en">Efrat's site to understand what is going on in the council and in real estate</span>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
     <nav class="primary">
       <a href="index.html"><span class="inline-toggle-lang"><span data-lang="he">בית</span><span data-lang="en">Home</span></span></a>
       <a href="members.html"><span class="inline-toggle-lang"><span data-lang="he">חברי המועצה</span><span data-lang="en">Members</span></span></a>
@@ -100,6 +107,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span data-lang="en">Topic clusters from across the council meetings. Click any topic to reveal expanded background and what each major speaker said.</span>
   </p>
 
+  <div class="chart-row">
+    <div class="chart-card" style="flex:1;">
+      <div class="chart-title"><span class="inline-toggle-lang"><span data-lang="he">הנושאים שחזרו הכי הרבה (מספר ישיבות)</span><span data-lang="en">Most recurring topics (number of meetings)</span></span></div>
+      <div style="position:relative;height:340px;width:100%;"><canvas id="topic-meetings-chart"></canvas></div>
+    </div>
+    <div class="chart-card" style="flex:1;">
+      <div class="chart-title"><span class="inline-toggle-lang"><span data-lang="he">על מה "בוזבזו" הכי הרבה מילים (אומדן מהתמלולים)</span><span data-lang="en">Where the most words were "spent" (estimated from transcripts)</span></span></div>
+      <div style="position:relative;height:340px;width:100%;"><canvas id="topic-words-chart"></canvas></div>
+    </div>
+  </div>
+  <p style="font-size:0.78rem;color:var(--muted);margin:-14px 0 24px;">
+    <span class="inline-toggle-lang">
+      <span data-lang="he">אומדן המילים חושב מתוך כ-394 אלף מילות תמלול: קטעי דיון זוהו לפי מילות מפתח לכל נושא, כולל חילופי הדברים שסביבן. לחיצה על עמודה קופצת לנושא.</span>
+      <span data-lang="en">Word estimates were computed from ~394K transcript words: discussion segments were matched to each topic by keywords, including the surrounding exchange. Click a bar to jump to that topic.</span>
+    </span>
+  </p>
+
   <div class="topic-search-wrap">
     <input id="topic-search" type="search" autocomplete="off" />
   </div>
@@ -115,13 +139,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer class="site">
   <div class="inner toggle-lang">
-    <div data-lang="he">מבוסס על פרוטוקולים רשמיים של מועצת אפרת. עודכן לאחרונה: מאי 2026.<br><a href="https://www.efrat.muni.il/he/protocols/?year=0&category=6&order=date-desc" target="_blank" rel="noopener" style="color:var(--accent);">לפרוטוקול של כל ישיבת מועצה לחצו כאן</a>.</div>
-    <div data-lang="en">Based on official Efrat Council protocols. Last updated: May 2026.<br><a href="https://www.efrat.muni.il/he/protocols/?year=0&category=6&order=date-desc" target="_blank" rel="noopener" style="color:var(--accent);">For a protocol of every council meeting click here</a>.</div>
+    <div data-lang="he">מבוסס על פרוטוקולים רשמיים של מועצת אפרת. עודכן לאחרונה: מאי 2026.<br><a href="https://www.efrat.muni.il/he/protocols/?year=0&amp;category=6&amp;order=date-desc" target="_blank" rel="noopener" style="color:var(--accent);">לפרוטוקול של כל ישיבת מועצה לחצו כאן</a>.</div>
+    <div data-lang="en">Based on official Efrat Council protocols. Last updated: May 2026.<br><a href="https://www.efrat.muni.il/he/protocols/?year=0&amp;category=6&amp;order=date-desc" target="_blank" rel="noopener" style="color:var(--accent);">For a protocol of every council meeting click here</a>.</div>
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="assets/data.js"></script>
 <script src="assets/app.js"></script>
+<script>
+(function() {
+  // Estimated words spent per topic, computed offline from the official meeting
+  // transcripts (~394K words total): discussion turns matched by topic keywords,
+  // extended over the surrounding exchange. Re-run analysis when adding meetings.
+  var TOPIC_WORDS = {
+    "capital-projects": 16605, "budget-rounds": 14423, "education-youth": 12954,
+    "tamar-water": 10840, "rabbi-selection": 10495, "mall-parking-arnona": 9551,
+    "council-committees": 9523, "welfare-dept-review": 7372, "budget": 6115,
+    "budget-2025-approval": 5423, "palestinian-workers": 4824, "credit-sewage": 3902,
+    "efrat-beclick": 3263, "eitam-farm": 2881, "social-services": 2744,
+    "post-election-2024": 2714, "mordot-hazayit": 2553, "audit-disputes": 1777,
+    "youth-prayer": 1748, "security-gates": 1255, "youth-dept-review": 1232,
+    "ev-charging": 1198, "social-solidarity": 880, "procedure": 863,
+    "mifal-hapais": 809, "audit-change": 393, "synagogue-allocation": 365,
+    "education-director-extension": 290, "mayor-us-trip": 0
+  };
+  var PALETTE = ['#1f6d8c', '#b18a3a', '#2c7a4b', '#b03a3a', '#f5c842', '#5b6f87', '#7a6235', '#c76f9d', '#6b4fa3', '#3aa6b0'];
+  var chartLang = (function(){ try { return localStorage.getItem('efrat-lang') || 'he'; } catch(e){ return 'he'; }})();
+  var charts = [];
+
+  function topicLabel(t) { return chartLang === 'he' ? t.he : t.en; }
+  function trunc(s) { return s.length > 34 ? s.slice(0, 32) + '…' : s; }
+
+  function makeBar(canvasId, items, valueFn, tooltipSuffix) {
+    var ids = items.map(function(t){ return t.id; });
+    return new Chart(document.getElementById(canvasId), {
+      type: 'bar',
+      data: {
+        labels: items.map(function(t){ return trunc(topicLabel(t)); }),
+        datasets: [{ data: items.map(valueFn), backgroundColor: items.map(function(_, i){ return PALETTE[i % PALETTE.length]; }), borderRadius: 4 }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: chartLang === 'he', callbacks: { label: function(c){ return c.parsed.x.toLocaleString('en-US') + tooltipSuffix; } } }
+        },
+        scales: { x: { beginAtZero: true }, y: { ticks: { autoSkip: false, font: { size: 11 } } } },
+        onClick: function(evt, els) {
+          if (els.length) {
+            var tid = ids[els[0].index];
+            location.hash = '#topic-' + tid;
+            var el = document.getElementById('topic-' + tid);
+            if (el) { el.open = true; el.scrollIntoView({ behavior: 'smooth' }); }
+          }
+        }
+      }
+    });
+  }
+
+  function buildTopicCharts() {
+    charts.forEach(function(c){ c.destroy(); });
+    charts = [];
+    var byMeetings = COUNCIL_DATA.topics.slice().sort(function(a, b){ return (b.meetings||[]).length - (a.meetings||[]).length; }).slice(0, 10);
+    var byWords = COUNCIL_DATA.topics.slice().sort(function(a, b){ return (TOPIC_WORDS[b.id]||0) - (TOPIC_WORDS[a.id]||0); }).slice(0, 10);
+    charts.push(makeBar('topic-meetings-chart', byMeetings, function(t){ return (t.meetings||[]).length; }, chartLang === 'he' ? ' ישיבות' : ' meetings'));
+    charts.push(makeBar('topic-words-chart', byWords, function(t){ return TOPIC_WORDS[t.id]||0; }, chartLang === 'he' ? ' מילים (אומדן)' : ' words (est.)'));
+  }
+  buildTopicCharts();
+  document.querySelectorAll('.lang-toggle button').forEach(function(b) {
+    b.addEventListener('click', function() { chartLang = b.dataset.lang; buildTopicCharts(); });
+  });
+})();
+</script>
 <script>
 (function() {
   const list = document.getElementById('topics-list');
