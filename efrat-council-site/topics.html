@@ -186,7 +186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div style="font-size:1.05rem;font-weight:600;">
             <span class="inline-toggle-lang"><span data-lang="he">${t.he}</span><span data-lang="en">${t.en}</span></span>
           </div>
-            ${t.meetings.map(mid => { const lbl = meetingLabels[mid] || { he: mid, en: mid }; return `<span class="tag" style="margin-${document.dir==='rtl'?'left':'right'}:6px;"><span class="inline-toggle-lang"><span data-lang="he">${lbl.he}</span><span data-lang="en">${lbl.en}</span></span></span>`; }).join('')}
+            ${t.meetings.map(mid => { const _mt = COUNCIL_DATA.meetings.find(x => x.id === mid); const _d = _mt ? EfratSite.fmtDate(_mt.date) : mid; const lbl = { he: _d, en: _d }; return `<span class="tag" style="margin-${document.dir==='rtl'?'left':'right'}:6px;"><span class="inline-toggle-lang"><span data-lang="he">${lbl.he}</span><span data-lang="en">${lbl.en}</span></span></span>`; }).join('')}
             <span style="font-size:0.85rem;color:var(--ink);">
               <span class="inline-toggle-lang"><span data-lang="he">${t.summary.he}</span><span data-lang="en">${t.summary.en}</span></span>
             </span>

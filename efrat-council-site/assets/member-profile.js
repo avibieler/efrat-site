@@ -103,8 +103,8 @@
           <tr>
             <td class="title">
               <span class="inline-toggle-lang">
-                <span data-lang="he">${mt.title.he} — ${mt.date}</span>
-                <span data-lang="en">${mt.title.en} — ${mt.date}</span>
+                <span data-lang="he">${mt.title.he} — ${EfratSite.fmtDate(mt.date)}</span>
+                <span data-lang="en">${mt.title.en} — ${EfratSite.fmtDate(mt.date)}</span>
               </span>
             </td>
             <td>${m.attendance[mt.id] ? '✓' : '–'}</td>
