@@ -109,7 +109,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="index.html" class="active"><span class="inline-toggle-lang"><span data-lang="he">בית</span><span data-lang="en">Home</span></span></a>
       <a href="members.html"><span class="inline-toggle-lang"><span data-lang="he">חברי המועצה</span><span data-lang="en">Members</span></span></a>
       <a href="meetings.html"><span class="inline-toggle-lang"><span data-lang="he">ישיבות</span><span data-lang="en">Meetings</span></span></a>
-      <a href="topics.html"><span class="inline-toggle-lang"><span data-lang="he">נושאים</span><span data-lang="en">Topics</span></span></a>
       <a href="alignment.html"><span class="inline-toggle-lang"><span data-lang="he">דפוסי הצבעה</span><span data-lang="en">Voting Patterns</span></span></a>
       <a href="real-estate.html"><span class="inline-toggle-lang"><span data-lang="he">נדל"ן</span><span data-lang="en">Real Estate</span></span></a>
       <a href="budget-2026.html"><span class="inline-toggle-lang"><span data-lang="he">תקציב 2026</span><span data-lang="en">2026 Budget</span></span></a>
@@ -127,197 +126,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Countdown to next municipal election -->
   <div class="election-countdown" id="election-countdown"></div>
 
-  <!-- Latest meeting strip (populated from COUNCIL_DATA) -->
+  <!-- Latest meeting strip -->
   <a class="latest-strip" id="latest-strip" href="meetings.html" style="display:none;"></a>
 
-  <!-- Front-page newspaper grid -->
-  <div class="front-page">
+  <h2 class="section-title toggle-lang">
+    <span data-lang="he">על מה דנה המועצה</span>
+    <span data-lang="en">What the Council Discusses</span>
+  </h2>
+  <p class="toggle-lang">
+    <span data-lang="he">קבוצות הנושאים שעלו בישיבות המועצה. לחיצה על כל נושא חושפת רקע מורחב ומה אמר כל דובר עיקרי.</span>
+    <span data-lang="en">Topic clusters from across the council meetings. Click any topic to reveal expanded background and what each major speaker said.</span>
+  </p>
 
-    <!-- LEAD: The Budget -->
-    <article class="story fp-lead">
-      <a class="story-link" href="topics.html#topic-budget-rounds">
-        <div class="eyebrow toggle-lang">
-          <span data-lang="he">הסיפור הכי גדול · תקציב</span>
-          <span data-lang="en">Top story · Budget</span>
-        </div>
-        <h2 class="headline toggle-lang">
-          <span data-lang="he">שני סבבי תקציב, שני קרבות: 7–1 בעד 2026, אבל 2025 קוצץ בלי שלום</span>
-          <span data-lang="en">Two budget rounds, two fights: 7–1 for 2026, but 2025 was cut without consensus</span>
-        </h2>
-        <div class="dek toggle-lang">
-          <div data-lang="he"><span class="first-letter">ב</span>שלושה חודשים אישרה המועצה תקציב פעמיים. בספטמבר 2025 הצטמצם תקציב 2025 ל-137.79 מיליון ש"ח בהצבעה 5–2 (שניים נמנעו). בינואר 2026 אושר תקציב חדש בסך 144.26 מיליון — גידול של 20% מ-2023. אבי חדידה היה ההצבעה היחידה נגד, וטען שלא הוזמן לישיבת ההכנה: "אם זו ההתייחסות לאופוזיציה, בסדר." ראש המועצה השיב: "כל חבר שלא משקיע זמן בתקציב, מאכזב אותי."</div>
-          <div data-lang="en"><span class="first-letter">I</span>n three months the council approved a budget twice. In September 2025, the 2025 budget was cut to ₪137.79M in a 5–2 vote (two abstaining). In January 2026 a new budget passed at ₪144.26M — up 20% since 2023. Avi Hadida cast the only "no," saying he wasn't invited to the prep meeting: "If this is how the opposition is treated, fine." The mayor's retort: "Any member who doesn't invest time in the budget disappoints me."</div>
-        </div>
-        <div class="byline toggle-lang">
-          <span data-lang="he">סבבים בישיבות ספטמבר 30, ינואר 6, פברואר 3</span>
-          <span data-lang="en">Across the Sep 30, Jan 6, and Feb 3 meetings</span>
-        </div>
-        <div class="read-more toggle-lang">
-          <span data-lang="he">קרא עוד ←</span>
-          <span data-lang="en">Read more →</span>
-        </div>
-      </a>
-    </article>
+  <div class="chart-row">
+    <div class="chart-card" style="flex:1;">
+      <div class="chart-title"><span class="inline-toggle-lang"><span data-lang="he">הנושאים שחזרו הכי הרבה (מספר ישיבות)</span><span data-lang="en">Most recurring topics (number of meetings)</span></span></div>
+      <div style="position:relative;height:340px;width:100%;"><canvas id="topic-meetings-chart"></canvas></div>
+    </div>
+    <div class="chart-card" style="flex:1;">
+      <div class="chart-title"><span class="inline-toggle-lang"><span data-lang="he">על מה הוקדשו הכי הרבה מילים (אומדן מהתמלולים)</span><span data-lang="en">Where the most words were spent (estimated from transcripts)</span></span></div>
+      <div style="position:relative;height:340px;width:100%;"><canvas id="topic-words-chart"></canvas></div>
+    </div>
+  </div>
+  <p style="font-size:0.78rem;color:var(--muted);margin:-14px 0 24px;">
+    <span class="inline-toggle-lang">
+      <span data-lang="he">אומדן המילים חושב מתוך כ-394 אלף מילות תמלול: קטעי דיון זוהו לפי מילות מפתח לכל נושא, כולל חילופי הדברים שסביבן. לחיצה על עמודה קופצת לנושא.</span>
+      <span data-lang="en">Word estimates were computed from ~394K transcript words: discussion segments were matched to each topic by keywords, including the surrounding exchange. Click a bar to jump to that topic.</span>
+    </span>
+  </p>
 
-    <!-- SIDEBAR 1: Water Crisis -->
-    <article class="story fp-second">
-      <a class="story-link" href="topics.html#topic-tamar-water">
-        <div class="eyebrow toggle-lang">
-          <span data-lang="he">תשתיות · מים</span>
-          <span data-lang="en">Infrastructure · Water</span>
-        </div>
-        <h3 class="headline toggle-lang">
-          <span data-lang="he">לחץ המים בתמר צונח בשישי. ולא בגלל המקלחת.</span>
-          <span data-lang="en">Tamar's water pressure crashes on Fridays — and it's not the showers</span>
-        </h3>
-        <div class="dek toggle-lang">
-          <div data-lang="he">בין 13:00 ל-16:00 הלחץ יורד מ-4.5 ל-1 אטמוספירות. מהנדס המים אברהם בלאו אמר שהיה ברור שצריך להקדים בריכת מים, אך המועצה בחרה לאכלס קודם. ראש המועצה: "אתה כמהנדס מים אישרת לנו לקחת סיכון."</div>
-          <div data-lang="en">Between 1–4pm, pressure drops from 4.5 to 1 atmosphere. Engineer Avraham Blau said a new reservoir should have been built first — but the council chose to populate first. Mayor: "As the water engineer you let us take that risk."</div>
-        </div>
-      </a>
-    </article>
-
-    <!-- SIDEBAR 2: Mordot HaZayit -->
-    <article class="story fp-third">
-      <a class="story-link" href="topics.html#topic-mordot-hazayit">
-        <div class="eyebrow toggle-lang">
-          <span data-lang="he">תכנון ובנייה</span>
-          <span data-lang="en">Planning & Development</span>
-        </div>
-        <h3 class="headline toggle-lang">
-          <span data-lang="he">מורדות הזית: מועצת אפרת שוקלת לקחת את הפרויקט ממשרד השיכון</span>
-          <span data-lang="en">Mordot HaZayit: Efrat may pull the project away from the Housing Ministry</span>
-        </h3>
-        <div class="dek toggle-lang">
-          <div data-lang="he">משרד השיכון הודיע שחסר 200 מיליון ש"ח לפיתוח. המועצה דרשה במכתב: 30 יום או שמעבירים את הפרויקט אלינו (עם רמ"י). פוטנציאל של כ-80 מיליון ש"ח למבני ציבור. אבי חדידה הזהיר: "זה יכול להביא אותנו לחדלות פירעון."</div>
-          <div data-lang="en">The Housing Ministry says it's ₪200M short on infrastructure. The council sent a letter: 30 days, or transfer the project to us (jointly with RAMI). Potential of about ₪80M for public buildings. Avi Hadida warned: "This could bring us to insolvency."</div>
-        </div>
-      </a>
-    </article>
+  <div class="topic-search-wrap">
+    <input id="topic-search" type="search" autocomplete="off" />
   </div>
 
-  <!-- Second row: three smaller stories -->
-  <div class="fp-row">
-    <article class="story">
-      <a class="story-link" href="topics.html#topic-mifal-hapais">
-        <div class="eyebrow toggle-lang">
-          <span data-lang="he">תקציב · גילוי</span>
-          <span data-lang="en">Money · Discovery</span>
-        </div>
-        <h3 class="headline toggle-lang">
-          <span data-lang="he">המועצה מצאה כסף שנשכח במפעל הפיס</span>
-          <span data-lang="en">The council found forgotten money at Mifal HaPais</span>
-        </h3>
-        <div class="dek toggle-lang">
-          <div data-lang="he">בפגישה במפעל הפיס התגלו שני דברים: למעלה ממיליון ש"ח שאושר ב-2022 ולא נמשך כי הניירות לא הוגשו, ועוד 1.84 מיליון שמוצע כמקדמה לצמצום הגירעון. חנני פייגין: "כמה דברים כאלה עוד יש שאנחנו לא יודעים עליהם?"</div>
-          <div data-lang="en">A visit to the national lottery surfaced two surprises: over ₪1M approved in 2022 sat unclaimed because final paperwork was never filed, plus another ₪1.84M offered as an advance against the deficit. Hanani Feigin: "How many more such things are there?"</div>
-        </div>
-      </a>
-    </article>
-
-    <article class="story">
-      <a class="story-link" href="topics.html#topic-capital-projects">
-        <div class="eyebrow toggle-lang">
-          <span data-lang="he">תב"רים שאושרו</span>
-          <span data-lang="en">Capital projects approved</span>
-        </div>
-        <h3 class="headline toggle-lang">
-          <span data-lang="he">14+ תב"רים, מרכז ספורט של 39 מיליון בלב הסיפור</span>
-          <span data-lang="en">14+ TaBaRs approved, with a ₪39M sports center at the centre</span>
-        </h3>
-        <div class="dek toggle-lang">
-          <div data-lang="he">מרכז ספורט (39 מ' ש"ח), שיקום צנרת (2.4 מ'), פעולות קהילות (838 אלף), מערכות LPR לשערים, חינוך מיוחד, מצלמות, רכישת זכויות במבנה המועצה. הוויכוח היחיד היה על תב"ר 840 לשיקום כבישים — צורי דותן נמנע ושאל: "מי קובע מדיניות?"</div>
-          <div data-lang="en">A ₪39M sports center, ₪2.4M pipe rehab, ₪838K community-action funding, LPR systems at the gates, special-education equipment, cameras, council-floor rights purchase. The lone holdout was TaBaR 840 (road rehab) — Tzuri Dotan abstained and asked: "Who sets policy here?"</div>
-        </div>
-      </a>
-    </article>
-
-    <article class="story">
-      <a class="story-link" href="topics.html">
-        <div class="eyebrow toggle-lang">
-          <span data-lang="he">עוד 15 נושאים</span>
-          <span data-lang="en">15 more topics</span>
-        </div>
-        <h3 class="headline toggle-lang">
-          <span data-lang="he">חוות עיטם, מבקרת חדשה, בחירת רב, מדיניות טעינה</span>
-          <span data-lang="en">Eitam Farm, the new auditor, picking a rabbi, EV-charging rules</span>
-        </h3>
-        <div class="dek toggle-lang">
-          <div data-lang="he">דיון ארוך על מצב חוות עיטם; מבקרת חדשה לאחר שנים בלי מבקר; אסיפה של 24 איש לבחירת רב; מדיניות חדשה לעמדות טעינה פרטיות; הפיצוץ הציבורי על קיזוזי חובות הספקים — ועוד.</div>
-          <div data-lang="en">A long discussion about Eitam Farm's status; a new auditor after years without one; a 24-person assembly to pick a rabbi; new rules for private EV-charging stations; the audit-committee blowup over supplier debt offsets — and more.</div>
-        </div>
-        <div class="read-more toggle-lang">
-          <span data-lang="he">לכל הנושאים ←</span>
-          <span data-lang="en">All topics →</span>
-        </div>
-      </a>
-    </article>
+  <div id="topics-list"></div>
+  <div id="topics-empty" class="topic-search-empty" style="display:none;">
+    <span class="inline-toggle-lang">
+      <span data-lang="he">לא נמצאו נושאים תואמים.</span>
+      <span data-lang="en">No matching topics.</span>
+    </span>
   </div>
-
-  <!-- What the council talks about -->
-  <section style="margin-top:36px;">
-    <h2 class="section-title toggle-lang">
-      <span data-lang="he">על מה המועצה מדברת</span>
-      <span data-lang="en">What the council talks about</span>
-    </h2>
-    <p class="toggle-lang" style="margin-bottom:6px;">
-      <span data-lang="he">אומדן המילים שהוקדשו לכל נושא, מתוך כ-394 אלף מילות תמלול של ישיבות המועצה. לחיצה על עמודה פותחת את הנושא.</span>
-      <span data-lang="en">Estimated words devoted to each topic, out of ~394K transcript words from council meetings. Click a bar to open the topic.</span>
-    </p>
-    <div class="chart-card">
-      <div style="position:relative;height:300px;width:100%;"><canvas id="home-topics-chart"></canvas></div>
-      <div style="text-align:end;margin-top:8px;">
-        <a href="topics.html" class="read-more"><span class="inline-toggle-lang"><span data-lang="he">לכל הנושאים ←</span><span data-lang="en">All topics →</span></span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Below the fold: population by age -->
-  <section style="margin-top:36px;">
-    <h2 class="section-title toggle-lang">
-      <span data-lang="he">שינוי באוכלוסיית אפרת לפי גיל — 2009 עד 2024</span>
-      <span data-lang="en">Efrat population change by age group — 2009 to 2024</span>
-    </h2>
-    <p class="toggle-lang" style="margin-bottom:6px;">
-      <span data-lang="he">שינוי מצטבר לכל קבוצת גיל ביחס לשנת הבסיס 2009.</span>
-      <span data-lang="en">Cumulative change for each age group relative to the 2009 baseline.</span>
-    </p>
-    <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px;box-shadow:var(--shadow);">
-      <div id="pop-chart-legend" style="display:flex;flex-wrap:wrap;gap:10px 20px;margin-bottom:12px;"></div>
-      <div style="position:relative;height:380px;width:100%;">
-        <canvas id="pop-chart"></canvas>
-      </div>
-      <p style="font-size:0.78rem;color:var(--muted);margin:10px 0 0;text-align:center;">
-        <span class="inline-toggle-lang">
-          <span data-lang="he">מקור: הלשכה המרכזית לסטטיסטיקה.</span>
-          <span data-lang="en">Source: Israel Central Bureau of Statistics.</span>
-        </span>
-      </p>
-    </div>
-    <div class="callout toggle-lang" style="margin-top:16px;">
-      <div data-lang="he">
-        <strong>מה הגרף מראה:</strong>
-        <ul style="margin:8px 0;padding-inline-start:22px;line-height:1.7;">
-          <li><strong>גיל 65+ גדל פי 4.7</strong> — מ-274 ב-2009 ל-1,282 ב-2024 (+368%). השינוי הדמוגרפי הבולט ביותר.</li>
-          <li><strong>ילדים מתחת לגיל 5 בירידה מאז 2021</strong> — משיא של 1,385 ב-2021 ל-1,167 ב-2024 (כ-16%-). הקבוצה היחידה שמתכווצת בשנים האחרונות, אם כי עדיין מעל רמת 2009.</li>
-          <li><strong>גיל 20–29 קפץ בחדות ב-2011</strong> ואז התייצב — ככל הנראה גל של משפחות צעירות שנכנס לשכונות חדשות.</li>
-          <li><strong>גיל 30–64</strong> צמח ב-54%, בקצב הממוצע של העיר.</li>
-          <li><strong>בקצרה:</strong> הפרופיל הדמוגרפי של אפרת מזדקן. גיל 65+ גדל בקצב מהיר מכל קבוצה אחרת, בעוד שמספר הילדים הקטנים ירד בשנים האחרונות.</li>
-        </ul>
-      </div>
-      <div data-lang="en">
-        <strong>What the chart shows:</strong>
-        <ul style="margin:8px 0;padding-inline-start:22px;line-height:1.7;">
-          <li><strong>65+ grew nearly 5×</strong> — from 274 in 2009 to 1,282 in 2024 (+368%). The single clearest structural shift in the town.</li>
-          <li><strong>Under-5s have been falling since 2021</strong> — from a peak of 1,385 in 2021 to 1,167 in 2024 (about −16%). The only group shrinking in recent years, though still above its 2009 level.</li>
-          <li><strong>Young adults (20–29) jumped sharply in 2011</strong> then levelled off — likely a wave of young families entering new neighborhoods.</li>
-          <li><strong>Ages 30–64</strong> grew 54%, close to the town's average rate.</li>
-          <li><strong>In short:</strong> Efrat's demographic profile is aging. The 65+ group is growing far faster than any other cohort, while the absolute count of young children (0–4) has fallen in recent years.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <footer class="site">
@@ -329,17 +177,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script src="assets/data.js"></script>
-<script src="assets/population-data.js"></script>
 <script src="assets/app.js"></script>
 <script>
 (function() {
   const d = COUNCIL_DATA;
   const sorted = d.meetings.slice().sort((a, b) => b.date.localeCompare(a.date));
   const latest = sorted[0];
-  const first = sorted[sorted.length - 1];
-  const yr = iso => iso.slice(0, 4);
-
-  // Next municipal election: currently scheduled for October 2028 (approximate date, hence the ~)
   const ELECTION_DATE = new Date('2028-10-15');
   const days = Math.ceil((ELECTION_DATE - new Date()) / 86400000);
   document.getElementById('election-countdown').innerHTML = `
@@ -350,7 +193,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span data-lang="en">days until the next local election <span class="ec-note">(scheduled for October 2028 — approximate)</span></span>
       </span>
     </div>`;
-
   const votesInLatest = d.votes.filter(v => v.meeting === latest.id).length;
   const strip = document.getElementById('latest-strip');
   strip.style.display = '';
@@ -359,47 +201,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="ls-title"><span class="inline-toggle-lang"><span data-lang="he">${latest.title.he}</span><span data-lang="en">${latest.title.en}</span></span></span>
     <span class="ls-meta">${EfratSite.fmtDate(latest.date)} · <span class="inline-toggle-lang"><span data-lang="he">${latest.agenda.length} סעיפים · ${votesInLatest} הצבעות</span><span data-lang="en">${latest.agenda.length} agenda items · ${votesInLatest} votes</span></span></span>
     <span class="ls-cta"><span class="inline-toggle-lang"><span data-lang="he">לסיכום המלא ←</span><span data-lang="en">Full summary →</span></span></span>`;
-
   const saved = (function(){ try { return localStorage.getItem('efrat-lang') || 'he'; } catch(e){ return 'he'; }})();
   document.querySelectorAll('#election-countdown .inline-toggle-lang, #latest-strip .inline-toggle-lang').forEach(el => el.classList.add(saved));
+})();
+</script>
+<script>
+(function() {
+  // Estimated words spent per topic — shared data in assets/data.js (topic_words)
+  var TOPIC_WORDS = COUNCIL_DATA.topic_words || {};
+  var PALETTE = ['#1f6d8c', '#b18a3a', '#2c7a4b', '#b03a3a', '#f5c842', '#5b6f87', '#7a6235', '#c76f9d', '#6b4fa3', '#3aa6b0'];
+  var chartLang = (function(){ try { return localStorage.getItem('efrat-lang') || 'he'; } catch(e){ return 'he'; }})();
+  var charts = [];
 
-  // ---- Top topics by words spent (shared data from data.js) ----
-  const PALETTE = ['#1f6d8c', '#b18a3a', '#2c7a4b', '#b03a3a', '#f5c842', '#5b6f87', '#7a6235', '#c76f9d'];
-  let topicsChart = null;
-  let chartLang = saved;
-  function buildTopicsChart() {
-    if (topicsChart) topicsChart.destroy();
-    const words = COUNCIL_DATA.topic_words || {};
-    const top = COUNCIL_DATA.topics.slice()
-      .sort((a, b) => (words[b.id] || 0) - (words[a.id] || 0)).slice(0, 8);
-    const ids = top.map(t => t.id);
-    topicsChart = new Chart(document.getElementById('home-topics-chart'), {
+  function topicLabel(t) { return chartLang === 'he' ? t.he : t.en; }
+  function trunc(s) { return s.length > 34 ? s.slice(0, 32) + '…' : s; }
+
+  function makeBar(canvasId, items, valueFn, tooltipSuffix) {
+    var ids = items.map(function(t){ return t.id; });
+    return new Chart(document.getElementById(canvasId), {
       type: 'bar',
       data: {
-        labels: top.map(t => { const s = chartLang === 'he' ? t.he : t.en; return s.length > 32 ? s.slice(0, 30) + '…' : s; }),
-        datasets: [{ data: top.map(t => words[t.id] || 0), backgroundColor: top.map((_, i) => PALETTE[i % PALETTE.length]), borderRadius: 4 }]
+        labels: items.map(function(t){ return trunc(topicLabel(t)); }),
+        datasets: [{ data: items.map(valueFn), backgroundColor: items.map(function(_, i){ return PALETTE[i % PALETTE.length]; }), borderRadius: 4 }]
       },
       options: {
         indexAxis: 'y', responsive: true, maintainAspectRatio: false,
         plugins: {
           legend: { display: false },
-          tooltip: { rtl: chartLang === 'he', callbacks: { label: c => {
-            const t = top[c.dataIndex];
-            const m = (t.meetings || []).length;
-            return c.parsed.x.toLocaleString('en-US') + (chartLang === 'he' ? ' מילים · ' + m + ' ישיבות' : ' words · ' + m + ' meetings');
-          } } }
+          tooltip: { rtl: chartLang === 'he', callbacks: { label: function(c){ return c.parsed.x.toLocaleString('en-US') + tooltipSuffix; } } }
         },
         scales: { x: { beginAtZero: true }, y: { ticks: { autoSkip: false, font: { size: 11 } } } },
-        onClick: (evt, els) => { if (els.length) location.href = 'topics.html#topic-' + ids[els[0].index]; }
+        onClick: function(evt, els) {
+          if (els.length) {
+            var tid = ids[els[0].index];
+            location.hash = '#topic-' + tid;
+            var el = document.getElementById('topic-' + tid);
+            if (el) { el.open = true; el.scrollIntoView({ behavior: 'smooth' }); }
+          }
+        }
       }
     });
   }
-  buildTopicsChart();
-  document.querySelectorAll('.lang-toggle button').forEach(b => {
-    b.addEventListener('click', () => { chartLang = b.dataset.lang; buildTopicsChart(); });
+
+  function buildTopicCharts() {
+    charts.forEach(function(c){ c.destroy(); });
+    charts = [];
+    var byMeetings = COUNCIL_DATA.topics.slice().sort(function(a, b){ return (b.meetings||[]).length - (a.meetings||[]).length; }).slice(0, 10);
+    var byWords = COUNCIL_DATA.topics.slice().sort(function(a, b){ return (TOPIC_WORDS[b.id]||0) - (TOPIC_WORDS[a.id]||0); }).slice(0, 10);
+    charts.push(makeBar('topic-meetings-chart', byMeetings, function(t){ return (t.meetings||[]).length; }, chartLang === 'he' ? ' ישיבות' : ' meetings'));
+    charts.push(makeBar('topic-words-chart', byWords, function(t){ return TOPIC_WORDS[t.id]||0; }, chartLang === 'he' ? ' מילים (אומדן)' : ' words (est.)'));
+  }
+  buildTopicCharts();
+  document.querySelectorAll('.lang-toggle button').forEach(function(b) {
+    b.addEventListener('click', function() { chartLang = b.dataset.lang; buildTopicCharts(); });
   });
 })();
 </script>
-<script src="assets/population-chart.js"></script>
+<script src="assets/topics-render.js"></script>
 </body>
 </html>

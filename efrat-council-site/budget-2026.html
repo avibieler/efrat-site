@@ -83,7 +83,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="index.html"><span class="inline-toggle-lang"><span data-lang="he">בית</span><span data-lang="en">Home</span></span></a>
       <a href="members.html"><span class="inline-toggle-lang"><span data-lang="he">חברי המועצה</span><span data-lang="en">Members</span></span></a>
       <a href="meetings.html"><span class="inline-toggle-lang"><span data-lang="he">ישיבות</span><span data-lang="en">Meetings</span></span></a>
-      <a href="topics.html"><span class="inline-toggle-lang"><span data-lang="he">נושאים</span><span data-lang="en">Topics</span></span></a>
       <a href="alignment.html"><span class="inline-toggle-lang"><span data-lang="he">דפוסי הצבעה</span><span data-lang="en">Voting Patterns</span></span></a>
       <a href="real-estate.html"><span class="inline-toggle-lang"><span data-lang="he">נדל"ן</span><span data-lang="en">Real Estate</span></span></a>
       <a href="budget-2026.html" class="active"><span class="inline-toggle-lang"><span data-lang="he">תקציב 2026</span><span data-lang="en">2026 Budget</span></span></a>
@@ -325,6 +324,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </span>
   </p>
 
+  <!-- Demographics (moved from home) -->
+  <section style="margin-top:36px;">
+    <h2 class="section-title toggle-lang">
+      <span data-lang="he">שינוי באוכלוסיית אפרת לפי גיל — 2009 עד 2024</span>
+      <span data-lang="en">Efrat population change by age group — 2009 to 2024</span>
+    </h2>
+    <p class="toggle-lang" style="margin-bottom:6px;">
+      <span data-lang="he">שינוי מצטבר לכל קבוצת גיל ביחס לשנת הבסיס 2009.</span>
+      <span data-lang="en">Cumulative change for each age group relative to the 2009 baseline.</span>
+    </p>
+    <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px;box-shadow:var(--shadow);">
+      <div id="pop-chart-legend" style="display:flex;flex-wrap:wrap;gap:10px 20px;margin-bottom:12px;"></div>
+      <div style="position:relative;height:380px;width:100%;">
+        <canvas id="pop-chart"></canvas>
+      </div>
+      <p style="font-size:0.78rem;color:var(--muted);margin:10px 0 0;text-align:center;">
+        <span class="inline-toggle-lang">
+          <span data-lang="he">מקור: הלשכה המרכזית לסטטיסטיקה.</span>
+          <span data-lang="en">Source: Israel Central Bureau of Statistics.</span>
+        </span>
+      </p>
+    </div>
+    <div class="callout toggle-lang" style="margin-top:16px;">
+      <div data-lang="he">
+        <strong>מה הגרף מראה:</strong>
+        <ul style="margin:8px 0;padding-inline-start:22px;line-height:1.7;">
+          <li><strong>גיל 65+ גדל פי 4.7</strong> — מ-274 ב-2009 ל-1,282 ב-2024 (+368%). השינוי הדמוגרפי הבולט ביותר.</li>
+          <li><strong>ילדים מתחת לגיל 5 בירידה מאז 2021</strong> — משיא של 1,385 ב-2021 ל-1,167 ב-2024 (כ-16%-). הקבוצה היחידה שמתכווצת בשנים האחרונות, אם כי עדיין מעל רמת 2009.</li>
+          <li><strong>גיל 20–29 קפץ בחדות ב-2011</strong> ואז התייצב — ככל הנראה גל של משפחות צעירות שנכנס לשכונות חדשות.</li>
+          <li><strong>גיל 30–64</strong> צמח ב-54%, בקצב הממוצע של העיר.</li>
+          <li><strong>בקצרה:</strong> הפרופיל הדמוגרפי של אפרת מזדקן. גיל 65+ גדל בקצב מהיר מכל קבוצה אחרת, בעוד שמספר הילדים הקטנים ירד בשנים האחרונות.</li>
+        </ul>
+      </div>
+      <div data-lang="en">
+        <strong>What the chart shows:</strong>
+        <ul style="margin:8px 0;padding-inline-start:22px;line-height:1.7;">
+          <li><strong>65+ grew nearly 5×</strong> — from 274 in 2009 to 1,282 in 2024 (+368%). The single clearest structural shift in the town.</li>
+          <li><strong>Under-5s have been falling since 2021</strong> — from a peak of 1,385 in 2021 to 1,167 in 2024 (about −16%). The only group shrinking in recent years, though still above its 2009 level.</li>
+          <li><strong>Young adults (20–29) jumped sharply in 2011</strong> then levelled off — likely a wave of young families entering new neighborhoods.</li>
+          <li><strong>Ages 30–64</strong> grew 54%, close to the town's average rate.</li>
+          <li><strong>In short:</strong> Efrat's demographic profile is aging. The 65+ group is growing far faster than any other cohort, while the absolute count of young children (0–4) has fallen in recent years.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- CAVEATS -->
   <div class="callout toggle-lang" style="margin-top:28px;">
     <div data-lang="he"><strong>חשוב לדעת:</strong> חלק ניכר מהמשימות מסומן במפורש כ"מותנה בגיוס תקציב", ורבות נשענות על תב"רים או על "השקעת הון אנושי" ולא על מזומן. זוהי תוכנית — חלקה שאפתני. כל הנתונים לקוחים מתוכנית העבודה הרשמית המקושרת לתקציב 2026.</div>
@@ -502,5 +547,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="assets/population-data.js"></script>
+<script src="assets/population-chart.js"></script>
 </body>
 </html>

@@ -212,7 +212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><strong>True hover isolation</strong> — when you mouse over the cloud, every word fades except the one under your cursor. This works only with SVG; CSS-flex doesn't get you the same focus effect cleanly.</li>
       <li><strong>Words tucked into gaps</strong> instead of grid-flow positioning — "ביטחון" and "שמירה" rotate 90°, sitting in the left margin. "מורדות הזית" and "תיירות" tilt slightly. The cloud feels less like a list and more like a constellation.</li>
       <li><strong>Crisp at every size</strong> — SVG scales, so this will look identical on phones, retina monitors, and a projector. The CSS version stretches but uses raster-rendered text.</li>
-      <li><strong>One-click navigation</strong> is easy to add: every &lt;text&gt; can become a link to <code>topics.html?q=&lt;word&gt;</code>. The handler is two lines of JS that reads the click target's <code>data-word</code> attribute.</li>
+      <li><strong>One-click navigation</strong> is easy to add: every &lt;text&gt; can become a link to <code>index.html?q=&lt;word&gt;</code>. The handler is two lines of JS that reads the click target's <code>data-word</code> attribute.</li>
       <li><strong>The viewBox does the responsive work</strong> — it's set to <code>900 × 540</code> with <code>preserveAspectRatio="xMidYMid meet"</code>, so positions stay fixed relative to each other while the whole thing scales to fit the page width.</li>
     </ul>
     <p>If this version reads well, I'll wire it into the live topics page above the search bar, with click-to-search hooked up. Word positions and sizes are pure data — easy to tweak any single one without touching the others.</p>
