@@ -3388,16 +3388,16 @@ const COUNCIL_DATA = {
   // transcripts (~394K words total): discussion turns matched by topic keywords,
   // extended over the surrounding exchange. Re-run analysis when adding meetings.
   topic_words: {
-    "capital-projects": 16605, "budget-rounds": 14423, "education-youth": 12954,
-    "tamar-water": 10840, "rabbi-selection": 10495, "mall-parking-arnona": 9551,
-    "council-committees": 9523, "welfare-dept-review": 7372, "budget": 6115,
-    "budget-2025-approval": 5423, "palestinian-workers": 4824, "credit-sewage": 3902,
-    "efrat-beclick": 3263, "eitam-farm": 2881, "social-services": 2744,
-    "post-election-2024": 2714, "mordot-hazayit": 2553, "audit-disputes": 1777,
-    "youth-prayer": 1748, "security-gates": 1255, "youth-dept-review": 1232,
-    "ev-charging": 1198, "social-solidarity": 880, "procedure": 863,
-    "mifal-hapais": 809, "audit-change": 393, "synagogue-allocation": 365,
-    "education-director-extension": 290, "mayor-us-trip": 0
+    "capital-projects": 17748, "education-youth": 12966, "mall-parking-arnona": 10723,
+    "rabbi-selection": 9191, "social-services": 8507, "youth-dept-review": 8309,
+    "budget": 5894, "tamar-water": 5723, "credit-sewage": 5582,
+    "council-committees": 5256, "palestinian-workers": 5208, "budget-rounds": 4475,
+    "efrat-beclick": 4438, "welfare-dept-review": 3251, "budget-2025-approval": 3161,
+    "mordot-hazayit": 3076, "post-election-2024": 3037, "eitam-farm": 1993,
+    "synagogue-allocation": 1685, "audit-disputes": 1620, "procedure": 1604,
+    "youth-prayer": 1344, "security-gates": 1335, "ev-charging": 1198,
+    "social-solidarity": 858, "mifal-hapais": 794, "audit-change": 576,
+    "mayor-us-trip": 0, "education-director-extension": 0
   },
 
   topics: [
